@@ -1,0 +1,510 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B12B5241187D3CEE00FA8AB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B12B5240187D3CEE00FA8AB4 /* Foundation.framework */; };
+		B12B5243187D3CEE00FA8AB4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B12B5242187D3CEE00FA8AB4 /* CoreGraphics.framework */; };
+		B12B5245187D3CEE00FA8AB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B12B5244187D3CEE00FA8AB4 /* UIKit.framework */; };
+		B12B524B187D3CEE00FA8AB4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B12B5249187D3CEE00FA8AB4 /* InfoPlist.strings */; };
+		B12B524D187D3CEE00FA8AB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B12B524C187D3CEE00FA8AB4 /* main.m */; };
+		B12B5251187D3CEE00FA8AB4 /* HMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B12B5250187D3CEE00FA8AB4 /* HMAppDelegate.m */; };
+		B12B5254187D3CEE00FA8AB4 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B12B5252187D3CEE00FA8AB4 /* Main_iPhone.storyboard */; };
+		B12B5257187D3CEE00FA8AB4 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B12B5255187D3CEE00FA8AB4 /* Main_iPad.storyboard */; };
+		B12B525A187D3CEE00FA8AB4 /* HMiPhoneDemoRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12B5259187D3CEE00FA8AB4 /* HMiPhoneDemoRootViewController.m */; };
+		B12B525C187D3CEE00FA8AB4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B12B525B187D3CEE00FA8AB4 /* Images.xcassets */; };
+		B12B5263187D3CEE00FA8AB4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B12B5262187D3CEE00FA8AB4 /* XCTest.framework */; };
+		B12B5264187D3CEE00FA8AB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B12B5240187D3CEE00FA8AB4 /* Foundation.framework */; };
+		B12B5265187D3CEE00FA8AB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B12B5244187D3CEE00FA8AB4 /* UIKit.framework */; };
+		B12B526D187D3CEE00FA8AB4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B12B526B187D3CEE00FA8AB4 /* InfoPlist.strings */; };
+		B12B526F187D3CEE00FA8AB4 /* hipmob_ios_experienceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B12B526E187D3CEE00FA8AB4 /* hipmob_ios_experienceTests.m */; };
+		B12B527A187D407F00FA8AB4 /* HMiPhoneDemoHelpDeskOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12B5279187D407F00FA8AB4 /* HMiPhoneDemoHelpDeskOptionsViewController.m */; };
+		B12B527D187D40B100FA8AB4 /* HMiPhoneDemoArticleViewOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12B527C187D40B100FA8AB4 /* HMiPhoneDemoArticleViewOptionsViewController.m */; };
+		B12B5280187D40D400FA8AB4 /* HMiPhoneDemoLiveChatOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12B527F187D40D400FA8AB4 /* HMiPhoneDemoLiveChatOptionsViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B12B5266187D3CEE00FA8AB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B12B5235187D3CEE00FA8AB4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B12B523C187D3CEE00FA8AB4;
+			remoteInfo = "hipmob-ios-experience";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B12B523D187D3CEE00FA8AB4 /* hipmob-ios-experience.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hipmob-ios-experience.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B12B5240187D3CEE00FA8AB4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B12B5242187D3CEE00FA8AB4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B12B5244187D3CEE00FA8AB4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B12B5248187D3CEE00FA8AB4 /* hipmob-ios-experience-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hipmob-ios-experience-Info.plist"; sourceTree = "<group>"; };
+		B12B524A187D3CEE00FA8AB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B12B524C187D3CEE00FA8AB4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B12B524E187D3CEE00FA8AB4 /* hipmob-ios-experience-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hipmob-ios-experience-Prefix.pch"; sourceTree = "<group>"; };
+		B12B524F187D3CEE00FA8AB4 /* HMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMAppDelegate.h; sourceTree = "<group>"; };
+		B12B5250187D3CEE00FA8AB4 /* HMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMAppDelegate.m; sourceTree = "<group>"; };
+		B12B5253187D3CEE00FA8AB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		B12B5256187D3CEE00FA8AB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		B12B5258187D3CEE00FA8AB4 /* HMiPhoneDemoRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMiPhoneDemoRootViewController.h; sourceTree = "<group>"; };
+		B12B5259187D3CEE00FA8AB4 /* HMiPhoneDemoRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMiPhoneDemoRootViewController.m; sourceTree = "<group>"; };
+		B12B525B187D3CEE00FA8AB4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B12B5261187D3CEE00FA8AB4 /* hipmob-ios-experienceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "hipmob-ios-experienceTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B12B5262187D3CEE00FA8AB4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B12B526A187D3CEE00FA8AB4 /* hipmob-ios-experienceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hipmob-ios-experienceTests-Info.plist"; sourceTree = "<group>"; };
+		B12B526C187D3CEE00FA8AB4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B12B526E187D3CEE00FA8AB4 /* hipmob_ios_experienceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hipmob_ios_experienceTests.m; sourceTree = "<group>"; };
+		B12B5278187D407F00FA8AB4 /* HMiPhoneDemoHelpDeskOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMiPhoneDemoHelpDeskOptionsViewController.h; sourceTree = "<group>"; };
+		B12B5279187D407F00FA8AB4 /* HMiPhoneDemoHelpDeskOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMiPhoneDemoHelpDeskOptionsViewController.m; sourceTree = "<group>"; };
+		B12B527B187D40B100FA8AB4 /* HMiPhoneDemoArticleViewOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMiPhoneDemoArticleViewOptionsViewController.h; sourceTree = "<group>"; };
+		B12B527C187D40B100FA8AB4 /* HMiPhoneDemoArticleViewOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMiPhoneDemoArticleViewOptionsViewController.m; sourceTree = "<group>"; };
+		B12B527E187D40D400FA8AB4 /* HMiPhoneDemoLiveChatOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMiPhoneDemoLiveChatOptionsViewController.h; sourceTree = "<group>"; };
+		B12B527F187D40D400FA8AB4 /* HMiPhoneDemoLiveChatOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMiPhoneDemoLiveChatOptionsViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B12B523A187D3CEE00FA8AB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B12B5243187D3CEE00FA8AB4 /* CoreGraphics.framework in Frameworks */,
+				B12B5245187D3CEE00FA8AB4 /* UIKit.framework in Frameworks */,
+				B12B5241187D3CEE00FA8AB4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B12B525E187D3CEE00FA8AB4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B12B5263187D3CEE00FA8AB4 /* XCTest.framework in Frameworks */,
+				B12B5265187D3CEE00FA8AB4 /* UIKit.framework in Frameworks */,
+				B12B5264187D3CEE00FA8AB4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B12B5234187D3CEE00FA8AB4 = {
+			isa = PBXGroup;
+			children = (
+				B12B5246187D3CEE00FA8AB4 /* hipmob-ios-experience */,
+				B12B5268187D3CEE00FA8AB4 /* hipmob-ios-experienceTests */,
+				B12B523F187D3CEE00FA8AB4 /* Frameworks */,
+				B12B523E187D3CEE00FA8AB4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B12B523E187D3CEE00FA8AB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B12B523D187D3CEE00FA8AB4 /* hipmob-ios-experience.app */,
+				B12B5261187D3CEE00FA8AB4 /* hipmob-ios-experienceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B12B523F187D3CEE00FA8AB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B12B5240187D3CEE00FA8AB4 /* Foundation.framework */,
+				B12B5242187D3CEE00FA8AB4 /* CoreGraphics.framework */,
+				B12B5244187D3CEE00FA8AB4 /* UIKit.framework */,
+				B12B5262187D3CEE00FA8AB4 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B12B5246187D3CEE00FA8AB4 /* hipmob-ios-experience */ = {
+			isa = PBXGroup;
+			children = (
+				B12B524F187D3CEE00FA8AB4 /* HMAppDelegate.h */,
+				B12B5250187D3CEE00FA8AB4 /* HMAppDelegate.m */,
+				B12B5252187D3CEE00FA8AB4 /* Main_iPhone.storyboard */,
+				B12B5278187D407F00FA8AB4 /* HMiPhoneDemoHelpDeskOptionsViewController.h */,
+				B12B5279187D407F00FA8AB4 /* HMiPhoneDemoHelpDeskOptionsViewController.m */,
+				B12B527B187D40B100FA8AB4 /* HMiPhoneDemoArticleViewOptionsViewController.h */,
+				B12B527C187D40B100FA8AB4 /* HMiPhoneDemoArticleViewOptionsViewController.m */,
+				B12B527E187D40D400FA8AB4 /* HMiPhoneDemoLiveChatOptionsViewController.h */,
+				B12B527F187D40D400FA8AB4 /* HMiPhoneDemoLiveChatOptionsViewController.m */,
+				B12B5255187D3CEE00FA8AB4 /* Main_iPad.storyboard */,
+				B12B5258187D3CEE00FA8AB4 /* HMiPhoneDemoRootViewController.h */,
+				B12B5259187D3CEE00FA8AB4 /* HMiPhoneDemoRootViewController.m */,
+				B12B525B187D3CEE00FA8AB4 /* Images.xcassets */,
+				B12B5247187D3CEE00FA8AB4 /* Supporting Files */,
+			);
+			path = "hipmob-ios-experience";
+			sourceTree = "<group>";
+		};
+		B12B5247187D3CEE00FA8AB4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B12B5248187D3CEE00FA8AB4 /* hipmob-ios-experience-Info.plist */,
+				B12B5249187D3CEE00FA8AB4 /* InfoPlist.strings */,
+				B12B524C187D3CEE00FA8AB4 /* main.m */,
+				B12B524E187D3CEE00FA8AB4 /* hipmob-ios-experience-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B12B5268187D3CEE00FA8AB4 /* hipmob-ios-experienceTests */ = {
+			isa = PBXGroup;
+			children = (
+				B12B526E187D3CEE00FA8AB4 /* hipmob_ios_experienceTests.m */,
+				B12B5269187D3CEE00FA8AB4 /* Supporting Files */,
+			);
+			path = "hipmob-ios-experienceTests";
+			sourceTree = "<group>";
+		};
+		B12B5269187D3CEE00FA8AB4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B12B526A187D3CEE00FA8AB4 /* hipmob-ios-experienceTests-Info.plist */,
+				B12B526B187D3CEE00FA8AB4 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B12B523C187D3CEE00FA8AB4 /* hipmob-ios-experience */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B12B5272187D3CEE00FA8AB4 /* Build configuration list for PBXNativeTarget "hipmob-ios-experience" */;
+			buildPhases = (
+				B12B5239187D3CEE00FA8AB4 /* Sources */,
+				B12B523A187D3CEE00FA8AB4 /* Frameworks */,
+				B12B523B187D3CEE00FA8AB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "hipmob-ios-experience";
+			productName = "hipmob-ios-experience";
+			productReference = B12B523D187D3CEE00FA8AB4 /* hipmob-ios-experience.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B12B5260187D3CEE00FA8AB4 /* hipmob-ios-experienceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B12B5275187D3CEE00FA8AB4 /* Build configuration list for PBXNativeTarget "hipmob-ios-experienceTests" */;
+			buildPhases = (
+				B12B525D187D3CEE00FA8AB4 /* Sources */,
+				B12B525E187D3CEE00FA8AB4 /* Frameworks */,
+				B12B525F187D3CEE00FA8AB4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B12B5267187D3CEE00FA8AB4 /* PBXTargetDependency */,
+			);
+			name = "hipmob-ios-experienceTests";
+			productName = "hipmob-ios-experienceTests";
+			productReference = B12B5261187D3CEE00FA8AB4 /* hipmob-ios-experienceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B12B5235187D3CEE00FA8AB4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HM;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Orthogonal Labs, Inc.";
+				TargetAttributes = {
+					B12B5260187D3CEE00FA8AB4 = {
+						TestTargetID = B12B523C187D3CEE00FA8AB4;
+					};
+				};
+			};
+			buildConfigurationList = B12B5238187D3CEE00FA8AB4 /* Build configuration list for PBXProject "hipmob-ios-experience" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B12B5234187D3CEE00FA8AB4;
+			productRefGroup = B12B523E187D3CEE00FA8AB4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B12B523C187D3CEE00FA8AB4 /* hipmob-ios-experience */,
+				B12B5260187D3CEE00FA8AB4 /* hipmob-ios-experienceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B12B523B187D3CEE00FA8AB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B12B5257187D3CEE00FA8AB4 /* Main_iPad.storyboard in Resources */,
+				B12B525C187D3CEE00FA8AB4 /* Images.xcassets in Resources */,
+				B12B5254187D3CEE00FA8AB4 /* Main_iPhone.storyboard in Resources */,
+				B12B524B187D3CEE00FA8AB4 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B12B525F187D3CEE00FA8AB4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B12B526D187D3CEE00FA8AB4 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B12B5239187D3CEE00FA8AB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B12B525A187D3CEE00FA8AB4 /* HMiPhoneDemoRootViewController.m in Sources */,
+				B12B524D187D3CEE00FA8AB4 /* main.m in Sources */,
+				B12B527A187D407F00FA8AB4 /* HMiPhoneDemoHelpDeskOptionsViewController.m in Sources */,
+				B12B5251187D3CEE00FA8AB4 /* HMAppDelegate.m in Sources */,
+				B12B5280187D40D400FA8AB4 /* HMiPhoneDemoLiveChatOptionsViewController.m in Sources */,
+				B12B527D187D40B100FA8AB4 /* HMiPhoneDemoArticleViewOptionsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B12B525D187D3CEE00FA8AB4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B12B526F187D3CEE00FA8AB4 /* hipmob_ios_experienceTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B12B5267187D3CEE00FA8AB4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B12B523C187D3CEE00FA8AB4 /* hipmob-ios-experience */;
+			targetProxy = B12B5266187D3CEE00FA8AB4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B12B5249187D3CEE00FA8AB4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B12B524A187D3CEE00FA8AB4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B12B5252187D3CEE00FA8AB4 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B12B5253187D3CEE00FA8AB4 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		B12B5255187D3CEE00FA8AB4 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B12B5256187D3CEE00FA8AB4 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		B12B526B187D3CEE00FA8AB4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B12B526C187D3CEE00FA8AB4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B12B5270187D3CEE00FA8AB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B12B5271187D3CEE00FA8AB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B12B5273187D3CEE00FA8AB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hipmob-ios-experience/hipmob-ios-experience-Prefix.pch";
+				INFOPLIST_FILE = "hipmob-ios-experience/hipmob-ios-experience-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B12B5274187D3CEE00FA8AB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hipmob-ios-experience/hipmob-ios-experience-Prefix.pch";
+				INFOPLIST_FILE = "hipmob-ios-experience/hipmob-ios-experience-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B12B5276187D3CEE00FA8AB4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/hipmob-ios-experience.app/hipmob-ios-experience";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hipmob-ios-experience/hipmob-ios-experience-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "hipmob-ios-experienceTests/hipmob-ios-experienceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		B12B5277187D3CEE00FA8AB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/hipmob-ios-experience.app/hipmob-ios-experience";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "hipmob-ios-experience/hipmob-ios-experience-Prefix.pch";
+				INFOPLIST_FILE = "hipmob-ios-experienceTests/hipmob-ios-experienceTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B12B5238187D3CEE00FA8AB4 /* Build configuration list for PBXProject "hipmob-ios-experience" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B12B5270187D3CEE00FA8AB4 /* Debug */,
+				B12B5271187D3CEE00FA8AB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B12B5272187D3CEE00FA8AB4 /* Build configuration list for PBXNativeTarget "hipmob-ios-experience" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B12B5273187D3CEE00FA8AB4 /* Debug */,
+				B12B5274187D3CEE00FA8AB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B12B5275187D3CEE00FA8AB4 /* Build configuration list for PBXNativeTarget "hipmob-ios-experienceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B12B5276187D3CEE00FA8AB4 /* Debug */,
+				B12B5277187D3CEE00FA8AB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B12B5235187D3CEE00FA8AB4 /* Project object */;
+}
