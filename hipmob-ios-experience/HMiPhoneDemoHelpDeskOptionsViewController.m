@@ -28,8 +28,6 @@
     [super viewDidLoad];
     
     _menuItems = @[@"searchonly", @"searchwithlivechat", @"searchinreveal", @"searchwithcustomlivechat", @"searchwithcustomcolors", @"searchwithcustomarticleview", @"searchwithlivechatoperator"];
-    
-    self.navigationItem.hidesBackButton = YES;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -80,8 +78,8 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString * opt = (NSString *)[self.menuItems objectAtIndex:[indexPath row]];
     /*
+    NSString * opt = (NSString *)[self.menuItems objectAtIndex:[indexPath row]];
     if([@"helpdesk" isEqualToString:opt]){
         [self performSegueWithIdentifier:@"helpdeskoptions" sender:self];
     }else if([@"articleview" isEqualToString:opt]){
