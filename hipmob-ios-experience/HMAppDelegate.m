@@ -7,15 +7,34 @@
 //
 
 #import "HMAppDelegate.h"
+#import "hipmob/HMService.h"
+#import "HMiPhoneConfig.h"
 
 @implementation HMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // setup the Hipmob shared service
+    [[HMService sharedService] setup:APPID withLaunchOptions:launchOptions];
+
+    // register for push notifications
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound|UIRemoteNotificationTypeAlert)];
+
     // Override point for customization after application launch.
     return YES;
 }
-							
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)tokenValue {
+    // save the token: we'll need it for the Hipmob usage later
+    [[HMService sharedService] setPushToken:tokenValue];
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+    // will happen when run in simulator or if some other error occurs
+    NSLog(@"Error in registration: %@", error);
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

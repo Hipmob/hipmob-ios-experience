@@ -78,15 +78,9 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    /*
     NSString * opt = (NSString *)[self.menuItems objectAtIndex:[indexPath row]];
-    if([@"helpdesk" isEqualToString:opt]){
-        [self performSegueWithIdentifier:@"helpdeskoptions" sender:self];
-    }else if([@"articleview" isEqualToString:opt]){
-        [self performSegueWithIdentifier:@"articleviewoptions" sender:self];
-    }else if([@"livechat" isEqualToString:opt]){
-        [self performSegueWithIdentifier:@"livechatoptions" sender:self];
+    if([@"searchonly" isEqualToString:opt]){
+        [self performSegueWithIdentifier:@"searchonly" sender:self];
     }
-     */
 }
 @end

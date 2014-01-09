@@ -169,7 +169,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Search with Custom Colors" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cpz-Yr-cVq">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Search with Customizations" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cpz-Yr-cVq">
                                             <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -229,10 +229,126 @@
                     <navigationItem key="navigationItem" title="Knowledge Base Options" id="lWU-Vl-ZD5">
                         <barButtonItem key="backBarButtonItem" title="Done" id="es3-nG-F9E"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="KKO-QP-e2O" kind="push" identifier="searchonly" id="rTY-XQ-wSz"/>
+                        <segue destination="WJU-wu-ye6" kind="push" id="i0a-zi-3Nh"/>
+                        <segue destination="qZN-jH-i65" kind="push" id="rAn-SX-OHr"/>
+                        <segue destination="jXZ-7t-7TR" kind="push" id="eD2-7i-9Fc"/>
+                        <segue destination="kAX-nt-SPz" kind="push" id="vC8-x7-pT8"/>
+                        <segue destination="UzZ-ye-Bw0" kind="push" id="xq3-gn-b5H"/>
+                        <segue destination="tYY-HG-Oj7" kind="push" id="tV0-eQ-GkZ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ur-JV-Jch" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="330" y="-581"/>
+            <point key="canvasLocation" x="330" y="-732"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="W9M-ES-VJm">
+            <objects>
+                <viewController id="WJU-wu-ye6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bQY-Kl-DrQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="tJO-Qi-Fje"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PUG-Gn-cvd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ALE-kG-iOM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iEA-6H-sJQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="360" y="-1401"/>
+        </scene>
+        <!--Mi Phone Demo Search Only View Controller - Search Only-->
+        <scene sceneID="p2e-in-mJx">
+            <objects>
+                <viewController id="KKO-QP-e2O" customClass="HMiPhoneDemoSearchOnlyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Pd-tv-uRK"/>
+                        <viewControllerLayoutGuide type="bottom" id="QKh-Y3-eyU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wbf-zP-cNo">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rVu-YH-H39">
+                                <rect key="frame" x="20" y="0.0" width="280" height="103"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">This class demonstrates launching a standard knowledge base search window. No chat button will be available, and articles will be displayed within your application.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Source:  HMiPhoneDemoSearchOnlyViewController.m" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KZ5-VM-7MC">
+                                <rect key="frame" x="20" y="111" width="280" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1C-hM-VVY">
+                                <rect key="frame" x="58" y="163" width="205" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Open Knowledge Base">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="on_open_demo:" destination="KKO-QP-e2O" eventType="touchUpInside" id="KW0-Zm-Vho"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Search Only" id="5Zu-oq-PW2"/>
+                    <connections>
+                        <outlet property="opendemo" destination="v1C-hM-VVY" id="rUO-mR-7uY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P39-fe-AKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="861" y="-1401"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="VVB-pv-jiL">
+            <objects>
+                <viewController id="kAX-nt-SPz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gM8-nF-j7i"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yfp-JT-L8U"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FiB-28-XTk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TS9-YA-wiv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ps-MT-pXD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1324" y="-1401"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TYv-wG-QoJ">
+            <objects>
+                <viewController id="tYY-HG-Oj7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1t0-fy-CF6"/>
+                        <viewControllerLayoutGuide type="bottom" id="IHp-pF-mmu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BDY-A0-vT3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lwv-3e-o5f"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pqL-pk-OYJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1776" y="-1401"/>
         </scene>
         <!--Mi Phone Demo Article View Options View Controller - Article View Options-->
         <scene sceneID="Jrs-rz-Rpy">
@@ -446,6 +562,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e88-6B-IWQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="330" y="828"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="U5x-8Z-Hu3">
+            <objects>
+                <viewController id="qZN-jH-i65" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DIn-6y-mg5"/>
+                        <viewControllerLayoutGuide type="bottom" id="QrB-Yu-S8C"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vK1-IU-mv0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HvE-jE-Nke"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z6s-1P-L1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="861" y="-732"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="c0f-KO-Cbg">
+            <objects>
+                <viewController id="jXZ-7t-7TR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="crQ-Ah-VM8"/>
+                        <viewControllerLayoutGuide type="bottom" id="Huv-9l-M25"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bd5-th-bYj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DEB-oc-Dlw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Osy-BO-yhy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1324" y="-732"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="SHj-sO-tNX">
+            <objects>
+                <viewController id="UzZ-ye-Bw0" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ajz-lg-dTa"/>
+                        <viewControllerLayoutGuide type="bottom" id="p7M-YQ-Bk2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D8d-xN-IkC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iiN-65-2Xd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bMB-xT-3fz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1776" y="-732"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mH4-Pa-gg5">
