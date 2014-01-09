@@ -232,11 +232,6 @@
                     <connections>
                         <segue destination="KKO-QP-e2O" kind="push" identifier="searchonly" id="rTY-XQ-wSz"/>
                         <segue destination="WJU-wu-ye6" kind="push" identifier="searchwithlivechat" id="i0a-zi-3Nh"/>
-                        <segue destination="qZN-jH-i65" kind="push" id="rAn-SX-OHr"/>
-                        <segue destination="jXZ-7t-7TR" kind="push" id="eD2-7i-9Fc"/>
-                        <segue destination="kAX-nt-SPz" kind="push" id="vC8-x7-pT8"/>
-                        <segue destination="UzZ-ye-Bw0" kind="push" id="xq3-gn-b5H"/>
-                        <segue destination="tYY-HG-Oj7" kind="push" id="tV0-eQ-GkZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ur-JV-Jch" userLabel="First Responder" sceneMemberID="firstResponder"/>
