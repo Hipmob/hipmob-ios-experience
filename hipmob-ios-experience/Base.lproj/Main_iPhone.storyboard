@@ -231,7 +231,7 @@
                     </navigationItem>
                     <connections>
                         <segue destination="KKO-QP-e2O" kind="push" identifier="searchonly" id="rTY-XQ-wSz"/>
-                        <segue destination="WJU-wu-ye6" kind="push" id="i0a-zi-3Nh"/>
+                        <segue destination="WJU-wu-ye6" kind="push" identifier="searchwithlivechat" id="i0a-zi-3Nh"/>
                         <segue destination="qZN-jH-i65" kind="push" id="rAn-SX-OHr"/>
                         <segue destination="jXZ-7t-7TR" kind="push" id="eD2-7i-9Fc"/>
                         <segue destination="kAX-nt-SPz" kind="push" id="vC8-x7-pT8"/>
@@ -243,20 +243,51 @@
             </objects>
             <point key="canvasLocation" x="330" y="-732"/>
         </scene>
-        <!--View Controller-->
+        <!--Mi Phone Demo Search With Chat View Controller - Search with Live Chat-->
         <scene sceneID="W9M-ES-VJm">
             <objects>
-                <viewController id="WJU-wu-ye6" sceneMemberID="viewController">
+                <viewController id="WJU-wu-ye6" customClass="HMiPhoneDemoSearchWithChatViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bQY-Kl-DrQ"/>
                         <viewControllerLayoutGuide type="bottom" id="tJO-Qi-Fje"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="PUG-Gn-cvd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="b5d-X8-tDZ">
+                                <rect key="frame" x="20" y="20" width="280" height="103"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">This class demonstrates launching a standard knowledge base search window. A chat button will always be available, and articles will be displayed within your application.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Source:  HMiPhoneDemoSearchWithChatViewController.m" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="m97-w8-7ne">
+                                <rect key="frame" x="20" y="131" width="280" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOz-dH-uuH">
+                                <rect key="frame" x="58" y="183" width="205" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Open Knowledge Base">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="on_open_demo:" destination="WJU-wu-ye6" eventType="touchUpInside" id="yM4-Nu-bGz"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ALE-kG-iOM"/>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Search with Live Chat" id="ALE-kG-iOM"/>
+                    <connections>
+                        <outlet property="opendemo" destination="JOz-dH-uuH" id="tO2-gB-jNY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iEA-6H-sJQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -275,7 +306,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rVu-YH-H39">
-                                <rect key="frame" x="20" y="0.0" width="280" height="103"/>
+                                <rect key="frame" x="20" y="20" width="280" height="103"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">This class demonstrates launching a standard knowledge base search window. No chat button will be available, and articles will be displayed within your application.</string>
@@ -283,14 +314,14 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Source:  HMiPhoneDemoSearchOnlyViewController.m" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KZ5-VM-7MC">
-                                <rect key="frame" x="20" y="111" width="280" height="44"/>
+                                <rect key="frame" x="20" y="131" width="280" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1C-hM-VVY">
-                                <rect key="frame" x="58" y="163" width="205" height="30"/>
+                                <rect key="frame" x="58" y="183" width="205" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Open Knowledge Base">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>

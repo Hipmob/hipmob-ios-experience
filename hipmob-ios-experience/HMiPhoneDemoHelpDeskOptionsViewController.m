@@ -81,6 +81,8 @@
     NSString * opt = (NSString *)[self.menuItems objectAtIndex:[indexPath row]];
     if([@"searchonly" isEqualToString:opt]){
         [self performSegueWithIdentifier:@"searchonly" sender:self];
+    }else if([@"searchwithlivechat" isEqualToString:opt]){
+        [self performSegueWithIdentifier:@"searchwithlivechat" sender:self];
     }
 }
 @end

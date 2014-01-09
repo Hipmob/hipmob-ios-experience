@@ -75,6 +75,7 @@
 		B12B52E6187E1F5F00FA8AB4 /* hipmob-webview-back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B12B52BB187E1F5F00FA8AB4 /* hipmob-webview-back@2x.png */; };
 		B12B52E7187E1F5F00FA8AB4 /* hipmob-webview-forward.png in Resources */ = {isa = PBXBuildFile; fileRef = B12B52BC187E1F5F00FA8AB4 /* hipmob-webview-forward.png */; };
 		B12B52E8187E1F5F00FA8AB4 /* hipmob-webview-forward@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B12B52BD187E1F5F00FA8AB4 /* hipmob-webview-forward@2x.png */; };
+		B12B52ED187E25B900FA8AB4 /* HMiPhoneDemoSearchWithChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12B52EB187E25B900FA8AB4 /* HMiPhoneDemoSearchWithChatViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +167,8 @@
 		B12B52BC187E1F5F00FA8AB4 /* hipmob-webview-forward.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hipmob-webview-forward.png"; path = "hipmob.framework/Versions/A/Resources/hipmob-webview-forward.png"; sourceTree = "<group>"; };
 		B12B52BD187E1F5F00FA8AB4 /* hipmob-webview-forward@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hipmob-webview-forward@2x.png"; path = "hipmob.framework/Versions/A/Resources/hipmob-webview-forward@2x.png"; sourceTree = "<group>"; };
 		B12B52EA187E1FB100FA8AB4 /* HMiPhoneConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMiPhoneConfig.h; sourceTree = "<group>"; };
+		B12B52EB187E25B900FA8AB4 /* HMiPhoneDemoSearchWithChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMiPhoneDemoSearchWithChatViewController.m; sourceTree = "<group>"; };
+		B12B52EC187E25B900FA8AB4 /* HMiPhoneDemoSearchWithChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMiPhoneDemoSearchWithChatViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +289,8 @@
 		B12B5284187DBE3F00FA8AB4 /* Knowledge Base */ = {
 			isa = PBXGroup;
 			children = (
+				B12B52EB187E25B900FA8AB4 /* HMiPhoneDemoSearchWithChatViewController.m */,
+				B12B52EC187E25B900FA8AB4 /* HMiPhoneDemoSearchWithChatViewController.h */,
 				B12B5281187DBE0000FA8AB4 /* HMiPhoneDemoSearchOnlyViewController.h */,
 				B12B5282187DBE0000FA8AB4 /* HMiPhoneDemoSearchOnlyViewController.m */,
 				B12B5278187D407F00FA8AB4 /* HMiPhoneDemoHelpDeskOptionsViewController.h */,
@@ -507,6 +512,7 @@
 				B12B525A187D3CEE00FA8AB4 /* HMiPhoneDemoRootViewController.m in Sources */,
 				B12B524D187D3CEE00FA8AB4 /* main.m in Sources */,
 				B12B527A187D407F00FA8AB4 /* HMiPhoneDemoHelpDeskOptionsViewController.m in Sources */,
+				B12B52ED187E25B900FA8AB4 /* HMiPhoneDemoSearchWithChatViewController.m in Sources */,
 				B12B5251187D3CEE00FA8AB4 /* HMAppDelegate.m in Sources */,
 				B12B5280187D40D400FA8AB4 /* HMiPhoneDemoLiveChatOptionsViewController.m in Sources */,
 				B12B5283187DBE0000FA8AB4 /* HMiPhoneDemoSearchOnlyViewController.m in Sources */,
