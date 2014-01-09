@@ -85,6 +85,11 @@
 @property (nonatomic, retain) NSString * defaultQuery;
 
 /**
+ * The tag filter to apply to all queries.
+ */
+@property (nonatomic, retain) NSString * tagFilter;
+
+/**
  * The user's context when the search was loaded.
  */
 @property (nonatomic, retain) NSString * context;

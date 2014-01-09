@@ -46,6 +46,9 @@
         // ensure that no chat window is shown
         controller.chatEnabled = HMHelpDeskSearchChatEnabledNever;
         
+        // set the search view tag filter: this will apply to all searches from this search view controller
+        //controller.searchView.tagFilter = @"live chat";
+        
         // sets the default query
         controller.searchView.defaultQuery = @"iOS";
     }];

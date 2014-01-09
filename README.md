@@ -1,4 +1,5 @@
 hipmob-ios-experience
 =====================
 
-Hipmob iOS SDK Demonstration
+This project provides a detailed set of examples for the features supported by the Hipmob iOS library.
+
