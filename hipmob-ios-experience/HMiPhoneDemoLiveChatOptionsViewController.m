@@ -9,7 +9,7 @@
 #import "HMiPhoneDemoLiveChatOptionsViewController.h"
 
 @interface HMiPhoneDemoLiveChatOptionsViewController ()
-@property (nonatomic, strong) NSArray *menuItems;
+@property (nonatomic, strong) NSMutableArray *menuItems;
 @end
 
 @implementation HMiPhoneDemoLiveChatOptionsViewController
@@ -27,7 +27,15 @@
 {
     [super viewDidLoad];
     
-    _menuItems = @[@"defaultchat", @"chatwithcustomcolors", @"chatinreveal", @"chatwithcustomlayout"];
+    _menuItems = [[NSMutableArray alloc] initWithCapacity:10];
+
+    [_menuItems addObject:@"defaultchat"];
+    
+    //[_menuItems addObject:@"chatwithcustomcolors"];
+    
+    //[_menuItems addObject:@"chatinreveal"];
+    
+    //[_menuItems addObject:@"chatwithcustomlayout"];
 }
 
 -(void)viewWillAppear:(BOOL)animated

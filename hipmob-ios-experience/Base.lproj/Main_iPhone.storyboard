@@ -67,7 +67,9 @@
                         </prototypes>
                         <sections/>
                     </tableView>
-                    <navigationItem key="navigationItem" title="The Hipmob Experience" id="0OB-hn-iTy"/>
+                    <navigationItem key="navigationItem" title="The Hipmob Experience" id="0OB-hn-iTy">
+                        <barButtonItem key="backBarButtonItem" id="wgX-Tt-L6T"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="eZp-cm-32Z" kind="push" identifier="articleviewoptions" id="8ke-N8-wI5"/>
                         <segue destination="95B-Pf-qhZ" kind="push" identifier="helpdeskoptions" id="ETB-bu-R9i"/>
@@ -226,12 +228,11 @@
                             <outlet property="delegate" destination="95B-Pf-qhZ" id="xHn-C1-O6F"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Knowledge Base Options" id="lWU-Vl-ZD5">
-                        <barButtonItem key="backBarButtonItem" title="Done" id="es3-nG-F9E"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Knowledge Base Options" id="lWU-Vl-ZD5"/>
                     <connections>
                         <segue destination="KKO-QP-e2O" kind="push" identifier="searchonly" id="rTY-XQ-wSz"/>
                         <segue destination="WJU-wu-ye6" kind="push" identifier="searchwithlivechat" id="i0a-zi-3Nh"/>
+                        <segue destination="kAX-nt-SPz" kind="push" identifier="searchwithlivechatoperator" id="eSD-wL-8UJ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ur-JV-Jch" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -279,7 +280,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" title="Search with Live Chat" id="ALE-kG-iOM"/>
+                    <navigationItem key="navigationItem" title="Search with Live Chat" id="ALE-kG-iOM">
+                        <barButtonItem key="backBarButtonItem" id="NN3-wO-rQY"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="opendemo" destination="JOz-dH-uuH" id="tO2-gB-jNY"/>
                     </connections>
@@ -329,7 +332,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
-                    <navigationItem key="navigationItem" title="Search Only" id="5Zu-oq-PW2"/>
+                    <navigationItem key="navigationItem" title="Search Only" id="5Zu-oq-PW2">
+                        <barButtonItem key="backBarButtonItem" title="&lt;" id="41R-cR-Kf5"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="opendemo" destination="v1C-hM-VVY" id="rUO-mR-7uY"/>
                     </connections>
@@ -338,20 +343,53 @@
             </objects>
             <point key="canvasLocation" x="861" y="-1401"/>
         </scene>
-        <!--View Controller-->
+        <!--Mi Phone Demo Search With Chat If Operator Available View Controller - Search (Operator Available Chat)-->
         <scene sceneID="VVB-pv-jiL">
             <objects>
-                <viewController id="kAX-nt-SPz" sceneMemberID="viewController">
+                <viewController id="kAX-nt-SPz" customClass="HMiPhoneDemoSearchWithChatIfOperatorAvailableViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gM8-nF-j7i"/>
                         <viewControllerLayoutGuide type="bottom" id="Yfp-JT-L8U"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FiB-28-XTk">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QLO-Nt-J9E">
+                                <rect key="frame" x="20" y="20" width="280" height="133"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">This class demonstrates launching a standard knowledge base search window. A chat button will only be shown if an operator is online, and articles will be displayed within your application. If no operator is available a custom button will be shown that opens an email dialog.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Source: HMiPhoneDemoSearchWithChatIfOperatorAvailableViewController.m" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BTx-g5-TF9">
+                                <rect key="frame" x="20" y="161" width="280" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2KT-CN-otB">
+                                <rect key="frame" x="58" y="226" width="205" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Open Knowledge Base">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="on_open_demo:" destination="kAX-nt-SPz" eventType="touchUpInside" id="FTa-de-dBW"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="TS9-YA-wiv"/>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Search (Operator Available Chat)" id="TS9-YA-wiv">
+                        <barButtonItem key="backBarButtonItem" title="&lt;" id="2Kz-gg-d15"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="opendemo" destination="2KT-CN-otB" id="eWC-iA-JRf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ps-MT-pXD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -490,9 +528,7 @@
                             <outlet property="delegate" destination="eZp-cm-32Z" id="bM6-wJ-4pp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Article View Options" id="hdB-7M-y0h">
-                        <barButtonItem key="backBarButtonItem" title="Done" id="tHm-hv-FRu"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Article View Options" id="hdB-7M-y0h"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eSO-fJ-00X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -581,9 +617,7 @@
                             <outlet property="delegate" destination="2Me-hp-on6" id="3JT-wd-QVQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Live Chat Options" id="x1S-7r-N0a">
-                        <barButtonItem key="backBarButtonItem" title="Done" id="JYG-eW-hWn"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Live Chat Options" id="x1S-7r-N0a"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e88-6B-IWQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -621,7 +655,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="DEB-oc-Dlw"/>
+                    <navigationItem key="navigationItem" id="DEB-oc-Dlw">
+                        <barButtonItem key="backBarButtonItem" title="&lt;" id="UCT-3i-rO2"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Osy-BO-yhy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

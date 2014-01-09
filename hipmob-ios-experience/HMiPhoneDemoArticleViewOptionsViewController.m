@@ -9,7 +9,7 @@
 #import "HMiPhoneDemoArticleViewOptionsViewController.h"
 
 @interface HMiPhoneDemoArticleViewOptionsViewController ()
-@property (nonatomic, strong) NSArray *menuItems;
+@property (nonatomic, strong) NSMutableArray *menuItems;
 @end
 
 @implementation HMiPhoneDemoArticleViewOptionsViewController
@@ -27,7 +27,19 @@
 {
     [super viewDidLoad];
     
-    _menuItems = @[@"articleonly", @"articlewithlivechat", @"articleinreveal", @"articlewithcustomlivechat", @"articlewithlivechatoperator"];
+    _menuItems = [[NSMutableArray alloc] initWithCapacity:10];
+
+    [_menuItems addObject:@"articleonly"];
+    
+    //[_menuItems addObject:@"articlewithlivechat"];
+    
+    //[_menuItems addObject:@"articleinreveal"];
+    
+    //[_menuItems addObject:@"articlewithcustomlivechat"];
+    
+    //[_menuItems addObject:@"articlewithlivechatoperator"];
+    
+    //[_menuItems addObject:@"articlewithcustomtoolbar"];
 }
 
 -(void)viewWillAppear:(BOOL)animated

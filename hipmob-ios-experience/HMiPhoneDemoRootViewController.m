@@ -9,7 +9,7 @@
 #import "HMiPhoneDemoRootViewController.h"
 
 @interface HMiPhoneDemoRootViewController ()
-@property (nonatomic, strong) NSArray *menuItems;
+@property (nonatomic, strong) NSMutableArray *menuItems;
 @end
 
 @implementation HMiPhoneDemoRootViewController
@@ -18,7 +18,16 @@
 {
     [super viewDidLoad];
     
-    _menuItems = @[@"helpdesk", @"articleview", @"livechat"];
+    _menuItems = [[NSMutableArray alloc] initWithCapacity:3];
+    
+    // add the help desk options
+    [_menuItems addObject:@"helpdesk"];
+    
+    // add the article view options
+    [_menuItems addObject:@"articleview"];
+    
+    // add the live chat options
+    [_menuItems addObject:@"livechat"];
     
     self.navigationItem.hidesBackButton = YES;
 }

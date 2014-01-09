@@ -9,7 +9,7 @@
 #import "HMiPhoneDemoHelpDeskOptionsViewController.h"
 
 @interface HMiPhoneDemoHelpDeskOptionsViewController ()
-@property (nonatomic, strong) NSArray *menuItems;
+@property (nonatomic, strong) NSMutableArray *menuItems;
 @end
 
 @implementation HMiPhoneDemoHelpDeskOptionsViewController
@@ -27,7 +27,23 @@
 {
     [super viewDidLoad];
     
-    _menuItems = @[@"searchonly", @"searchwithlivechat", @"searchinreveal", @"searchwithcustomlivechat", @"searchwithcustomcolors", @"searchwithcustomarticleview", @"searchwithlivechatoperator"];
+    _menuItems = [[NSMutableArray alloc] initWithCapacity:10];
+
+    [_menuItems addObject:@"searchonly"];
+    
+    [_menuItems addObject:@"searchwithlivechat"];
+    
+    //[_menuItems addObject:@"searchinreveal"];
+    
+    //[_menuItems addObject:@"searchwithcustomlivechat"];
+    
+    //[_menuItems addObject:@"searchwithcustomcolors"];
+    
+    //[_menuItems addObject:@"searchwithcustomarticleview"];
+    
+    [_menuItems addObject:@"searchwithlivechatoperator"];
+    
+    //[_menuItems addObject:];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -83,6 +99,8 @@
         [self performSegueWithIdentifier:@"searchonly" sender:self];
     }else if([@"searchwithlivechat" isEqualToString:opt]){
         [self performSegueWithIdentifier:@"searchwithlivechat" sender:self];
+    }else if([@"searchwithlivechatoperator" isEqualToString:opt]){
+        [self performSegueWithIdentifier:@"searchwithlivechatoperator" sender:self];
     }
 }
 @end
