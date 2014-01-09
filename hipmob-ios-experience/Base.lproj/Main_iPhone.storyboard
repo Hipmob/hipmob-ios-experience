@@ -423,7 +423,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="articleonly" textLabel="aBM-Ug-49O" style="IBUITableViewCellStyleDefault" id="Osl-R3-6gn">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="articleonly" textLabel="aBM-Ug-49O" detailTextLabel="FD7-qb-OkQ" style="IBUITableViewCellStyleSubtitle" id="Osl-R3-6gn">
                                 <rect key="frame" x="0.0" y="119" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Osl-R3-6gn" id="fvb-KL-4Iq">
@@ -431,9 +431,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Article View Only" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aBM-Ug-49O">
-                                            <rect key="frame" x="15" y="0.0" width="270" height="43"/>
+                                            <rect key="frame" x="15" y="3" width="136" height="22"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Never show Chat Button" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FD7-qb-OkQ">
+                                            <rect key="frame" x="15" y="25" width="137" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -529,6 +536,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Article View Options" id="hdB-7M-y0h"/>
+                    <connections>
+                        <segue destination="qZN-jH-i65" kind="push" identifier="articleonly" id="fyg-pe-Dk2"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eSO-fJ-00X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -618,50 +628,111 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Live Chat Options" id="x1S-7r-N0a"/>
+                    <connections>
+                        <segue destination="jXZ-7t-7TR" kind="push" identifier="defaultchat" id="pfF-QB-zU7"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e88-6B-IWQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="330" y="828"/>
+            <point key="canvasLocation" x="330" y="996"/>
         </scene>
-        <!--View Controller-->
+        <!--Mi Phone Demo Article Only View Controller - Article Only-->
         <scene sceneID="U5x-8Z-Hu3">
             <objects>
-                <viewController id="qZN-jH-i65" sceneMemberID="viewController">
+                <viewController id="qZN-jH-i65" customClass="HMiPhoneDemoArticleOnlyViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DIn-6y-mg5"/>
                         <viewControllerLayoutGuide type="bottom" id="QrB-Yu-S8C"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vK1-IU-mv0">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="This class demonstrates launching a standard knowledge base article display. No chat button will be available." translatesAutoresizingMaskIntoConstraints="NO" id="E0e-DU-2Q5">
+                                <rect key="frame" x="20" y="20" width="280" height="69"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Source: HMiPhoneDemoArticleOnlyViewController.m" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zey-1D-Eao">
+                                <rect key="frame" x="20" y="97" width="280" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2T-Ii-bZi">
+                                <rect key="frame" x="58" y="145" width="205" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Open Article View">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="on_open_demo:" destination="qZN-jH-i65" eventType="touchUpInside" id="PQ6-dJ-JP4"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="HvE-jE-Nke"/>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Article Only" id="HvE-jE-Nke"/>
+                    <connections>
+                        <outlet property="opendemo" destination="d2T-Ii-bZi" id="2Yn-zI-9Hc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z6s-1P-L1Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="861" y="-732"/>
+            <point key="canvasLocation" x="905" y="132"/>
         </scene>
-        <!--View Controller-->
+        <!--Mi Phone Demo Default Chat View Controller - Default Chat-->
         <scene sceneID="c0f-KO-Cbg">
             <objects>
-                <viewController id="jXZ-7t-7TR" sceneMemberID="viewController">
+                <viewController id="jXZ-7t-7TR" customClass="HMiPhoneDemoDefaultChatViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="crQ-Ah-VM8"/>
                         <viewControllerLayoutGuide type="bottom" id="Huv-9l-M25"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bd5-th-bYj">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="This class demonstrates launching a standard live chat view controller." translatesAutoresizingMaskIntoConstraints="NO" id="oHL-Jh-gsD">
+                                <rect key="frame" x="20" y="20" width="280" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Source: HMiPhoneDemoDefaultChatViewController.m" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tES-dH-F8a">
+                                <rect key="frame" x="20" y="77" width="280" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pnw-eH-xV8">
+                                <rect key="frame" x="58" y="126" width="205" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Open Live Chat">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="on_open_demo:" destination="jXZ-7t-7TR" eventType="touchUpInside" id="6pE-rZ-wmq"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="DEB-oc-Dlw">
-                        <barButtonItem key="backBarButtonItem" title="&lt;" id="UCT-3i-rO2"/>
-                    </navigationItem>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Default Chat" id="DEB-oc-Dlw"/>
+                    <connections>
+                        <outlet property="opendemo" destination="Pnw-eH-xV8" id="YaX-Vt-tgc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Osy-BO-yhy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1324" y="-732"/>
+            <point key="canvasLocation" x="916" y="996"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="SHj-sO-tNX">

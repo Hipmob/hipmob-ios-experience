@@ -77,6 +77,8 @@
 		B12B52E8187E1F5F00FA8AB4 /* hipmob-webview-forward@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B12B52BD187E1F5F00FA8AB4 /* hipmob-webview-forward@2x.png */; };
 		B12B52ED187E25B900FA8AB4 /* HMiPhoneDemoSearchWithChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12B52EB187E25B900FA8AB4 /* HMiPhoneDemoSearchWithChatViewController.m */; };
 		B12B52F0187E436200FA8AB4 /* HMiPhoneDemoSearchWithChatIfOperatorAvailableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12B52EE187E436200FA8AB4 /* HMiPhoneDemoSearchWithChatIfOperatorAvailableViewController.m */; };
+		B12B52F3187E4C3E00FA8AB4 /* HMiPhoneDemoDefaultChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12B52F1187E4C3E00FA8AB4 /* HMiPhoneDemoDefaultChatViewController.m */; };
+		B12B52F6187E4C4600FA8AB4 /* HMiPhoneDemoArticleOnlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12B52F4187E4C4600FA8AB4 /* HMiPhoneDemoArticleOnlyViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +174,10 @@
 		B12B52EC187E25B900FA8AB4 /* HMiPhoneDemoSearchWithChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMiPhoneDemoSearchWithChatViewController.h; sourceTree = "<group>"; };
 		B12B52EE187E436200FA8AB4 /* HMiPhoneDemoSearchWithChatIfOperatorAvailableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMiPhoneDemoSearchWithChatIfOperatorAvailableViewController.m; sourceTree = "<group>"; };
 		B12B52EF187E436200FA8AB4 /* HMiPhoneDemoSearchWithChatIfOperatorAvailableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMiPhoneDemoSearchWithChatIfOperatorAvailableViewController.h; sourceTree = "<group>"; };
+		B12B52F1187E4C3E00FA8AB4 /* HMiPhoneDemoDefaultChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMiPhoneDemoDefaultChatViewController.m; sourceTree = "<group>"; };
+		B12B52F2187E4C3E00FA8AB4 /* HMiPhoneDemoDefaultChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMiPhoneDemoDefaultChatViewController.h; sourceTree = "<group>"; };
+		B12B52F4187E4C4600FA8AB4 /* HMiPhoneDemoArticleOnlyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMiPhoneDemoArticleOnlyViewController.m; sourceTree = "<group>"; };
+		B12B52F5187E4C4600FA8AB4 /* HMiPhoneDemoArticleOnlyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMiPhoneDemoArticleOnlyViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -307,6 +313,8 @@
 		B12B5285187DBE4700FA8AB4 /* Live Chat */ = {
 			isa = PBXGroup;
 			children = (
+				B12B52F1187E4C3E00FA8AB4 /* HMiPhoneDemoDefaultChatViewController.m */,
+				B12B52F2187E4C3E00FA8AB4 /* HMiPhoneDemoDefaultChatViewController.h */,
 				B12B527E187D40D400FA8AB4 /* HMiPhoneDemoLiveChatOptionsViewController.h */,
 				B12B527F187D40D400FA8AB4 /* HMiPhoneDemoLiveChatOptionsViewController.m */,
 			);
@@ -316,6 +324,8 @@
 		B12B5286187DBE4C00FA8AB4 /* Article View */ = {
 			isa = PBXGroup;
 			children = (
+				B12B52F4187E4C4600FA8AB4 /* HMiPhoneDemoArticleOnlyViewController.m */,
+				B12B52F5187E4C4600FA8AB4 /* HMiPhoneDemoArticleOnlyViewController.h */,
 				B12B527B187D40B100FA8AB4 /* HMiPhoneDemoArticleViewOptionsViewController.h */,
 				B12B527C187D40B100FA8AB4 /* HMiPhoneDemoArticleViewOptionsViewController.m */,
 			);
@@ -521,7 +531,9 @@
 				B12B5251187D3CEE00FA8AB4 /* HMAppDelegate.m in Sources */,
 				B12B5280187D40D400FA8AB4 /* HMiPhoneDemoLiveChatOptionsViewController.m in Sources */,
 				B12B5283187DBE0000FA8AB4 /* HMiPhoneDemoSearchOnlyViewController.m in Sources */,
+				B12B52F3187E4C3E00FA8AB4 /* HMiPhoneDemoDefaultChatViewController.m in Sources */,
 				B12B527D187D40B100FA8AB4 /* HMiPhoneDemoArticleViewOptionsViewController.m in Sources */,
+				B12B52F6187E4C4600FA8AB4 /* HMiPhoneDemoArticleOnlyViewController.m in Sources */,
 				B12B52F0187E436200FA8AB4 /* HMiPhoneDemoSearchWithChatIfOperatorAvailableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

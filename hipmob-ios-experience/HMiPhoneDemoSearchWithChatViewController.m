@@ -40,6 +40,9 @@
 - (IBAction)on_open_demo:(id)sender {
     // open a search view controller
     [[HMService sharedService] openHelpdeskSearch:self withSetup:^(HMHelpDeskSearchViewController * controller){
+        // set the title of the window
+        controller.body.title = @"Help Search";
+        
         // ensure that a chat window is always shown
         controller.chatEnabled = HMHelpDeskSearchChatEnabledAlways;
         

@@ -90,6 +90,9 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    NSString * opt = (NSString *)[self.menuItems objectAtIndex:[indexPath row]];
+    if([@"articleonly" isEqualToString:opt]){
+        [self performSegueWithIdentifier:@"articleonly" sender:self];
+    }
 }
 @end

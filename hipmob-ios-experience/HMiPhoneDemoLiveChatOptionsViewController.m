@@ -86,6 +86,9 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-
+    NSString * opt = (NSString *)[self.menuItems objectAtIndex:[indexPath row]];
+    if([@"defaultchat" isEqualToString:opt]){
+        [self performSegueWithIdentifier:@"defaultchat" sender:self];
+    }
 }
 @end
