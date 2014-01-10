@@ -83,6 +83,11 @@
 		B12B5301187E9D0F00FA8AB4 /* HMiPadDemoLiveChatOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12B52FF187E9D0F00FA8AB4 /* HMiPadDemoLiveChatOptionsViewController.m */; };
 		B12B5304187E9D1E00FA8AB4 /* HMiPadDemoHelpDeskOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12B5302187E9D1E00FA8AB4 /* HMiPadDemoHelpDeskOptionsViewController.m */; };
 		B12B5307187E9D2C00FA8AB4 /* HMiPadDemoArticleViewOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12B5305187E9D2C00FA8AB4 /* HMiPadDemoArticleViewOptionsViewController.m */; };
+		B12B530A187F38CD00FA8AB4 /* HMiPadDemoSearchOnlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12B5308187F38CD00FA8AB4 /* HMiPadDemoSearchOnlyViewController.m */; };
+		B12B530F187F9A4E00FA8AB4 /* HMiPadDemoSearchWithChatIfOperatorAvailableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12B530B187F9A4E00FA8AB4 /* HMiPadDemoSearchWithChatIfOperatorAvailableViewController.m */; };
+		B12B5310187F9A4E00FA8AB4 /* HMiPadDemoSearchWithChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12B530C187F9A4E00FA8AB4 /* HMiPadDemoSearchWithChatViewController.m */; };
+		B12B5313187F9EE000FA8AB4 /* HMiPadDemoArticleOnlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12B5311187F9EE000FA8AB4 /* HMiPadDemoArticleOnlyViewController.m */; };
+		B12B5316187F9EEC00FA8AB4 /* HMiPadDemoDefaultChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12B5314187F9EEC00FA8AB4 /* HMiPadDemoDefaultChatViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -190,6 +195,16 @@
 		B12B5303187E9D1E00FA8AB4 /* HMiPadDemoHelpDeskOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMiPadDemoHelpDeskOptionsViewController.h; sourceTree = "<group>"; };
 		B12B5305187E9D2C00FA8AB4 /* HMiPadDemoArticleViewOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMiPadDemoArticleViewOptionsViewController.m; sourceTree = "<group>"; };
 		B12B5306187E9D2C00FA8AB4 /* HMiPadDemoArticleViewOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMiPadDemoArticleViewOptionsViewController.h; sourceTree = "<group>"; };
+		B12B5308187F38CD00FA8AB4 /* HMiPadDemoSearchOnlyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMiPadDemoSearchOnlyViewController.m; sourceTree = "<group>"; };
+		B12B5309187F38CD00FA8AB4 /* HMiPadDemoSearchOnlyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMiPadDemoSearchOnlyViewController.h; sourceTree = "<group>"; };
+		B12B530B187F9A4E00FA8AB4 /* HMiPadDemoSearchWithChatIfOperatorAvailableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMiPadDemoSearchWithChatIfOperatorAvailableViewController.m; sourceTree = "<group>"; };
+		B12B530C187F9A4E00FA8AB4 /* HMiPadDemoSearchWithChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMiPadDemoSearchWithChatViewController.m; sourceTree = "<group>"; };
+		B12B530D187F9A4E00FA8AB4 /* HMiPadDemoSearchWithChatIfOperatorAvailableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMiPadDemoSearchWithChatIfOperatorAvailableViewController.h; sourceTree = "<group>"; };
+		B12B530E187F9A4E00FA8AB4 /* HMiPadDemoSearchWithChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMiPadDemoSearchWithChatViewController.h; sourceTree = "<group>"; };
+		B12B5311187F9EE000FA8AB4 /* HMiPadDemoArticleOnlyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMiPadDemoArticleOnlyViewController.m; sourceTree = "<group>"; };
+		B12B5312187F9EE000FA8AB4 /* HMiPadDemoArticleOnlyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMiPadDemoArticleOnlyViewController.h; sourceTree = "<group>"; };
+		B12B5314187F9EEC00FA8AB4 /* HMiPadDemoDefaultChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMiPadDemoDefaultChatViewController.m; sourceTree = "<group>"; };
+		B12B5315187F9EEC00FA8AB4 /* HMiPadDemoDefaultChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMiPadDemoDefaultChatViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -418,6 +433,8 @@
 		B12B52F9187E999600FA8AB4 /* Article View */ = {
 			isa = PBXGroup;
 			children = (
+				B12B5311187F9EE000FA8AB4 /* HMiPadDemoArticleOnlyViewController.m */,
+				B12B5312187F9EE000FA8AB4 /* HMiPadDemoArticleOnlyViewController.h */,
 				B12B5305187E9D2C00FA8AB4 /* HMiPadDemoArticleViewOptionsViewController.m */,
 				B12B5306187E9D2C00FA8AB4 /* HMiPadDemoArticleViewOptionsViewController.h */,
 			);
@@ -427,6 +444,12 @@
 		B12B52FA187E999C00FA8AB4 /* Knowledge Base */ = {
 			isa = PBXGroup;
 			children = (
+				B12B530B187F9A4E00FA8AB4 /* HMiPadDemoSearchWithChatIfOperatorAvailableViewController.m */,
+				B12B530C187F9A4E00FA8AB4 /* HMiPadDemoSearchWithChatViewController.m */,
+				B12B530D187F9A4E00FA8AB4 /* HMiPadDemoSearchWithChatIfOperatorAvailableViewController.h */,
+				B12B530E187F9A4E00FA8AB4 /* HMiPadDemoSearchWithChatViewController.h */,
+				B12B5308187F38CD00FA8AB4 /* HMiPadDemoSearchOnlyViewController.m */,
+				B12B5309187F38CD00FA8AB4 /* HMiPadDemoSearchOnlyViewController.h */,
 				B12B5302187E9D1E00FA8AB4 /* HMiPadDemoHelpDeskOptionsViewController.m */,
 				B12B5303187E9D1E00FA8AB4 /* HMiPadDemoHelpDeskOptionsViewController.h */,
 			);
@@ -436,6 +459,8 @@
 		B12B52FB187E99A300FA8AB4 /* Live Chat */ = {
 			isa = PBXGroup;
 			children = (
+				B12B5314187F9EEC00FA8AB4 /* HMiPadDemoDefaultChatViewController.m */,
+				B12B5315187F9EEC00FA8AB4 /* HMiPadDemoDefaultChatViewController.h */,
 				B12B52FF187E9D0F00FA8AB4 /* HMiPadDemoLiveChatOptionsViewController.m */,
 				B12B5300187E9D0F00FA8AB4 /* HMiPadDemoLiveChatOptionsViewController.h */,
 			);
@@ -587,6 +612,8 @@
 				B12B525A187D3CEE00FA8AB4 /* HMiPhoneDemoRootViewController.m in Sources */,
 				B12B524D187D3CEE00FA8AB4 /* main.m in Sources */,
 				B12B5307187E9D2C00FA8AB4 /* HMiPadDemoArticleViewOptionsViewController.m in Sources */,
+				B12B5313187F9EE000FA8AB4 /* HMiPadDemoArticleOnlyViewController.m in Sources */,
+				B12B5316187F9EEC00FA8AB4 /* HMiPadDemoDefaultChatViewController.m in Sources */,
 				B12B527A187D407F00FA8AB4 /* HMiPhoneDemoHelpDeskOptionsViewController.m in Sources */,
 				B12B52ED187E25B900FA8AB4 /* HMiPhoneDemoSearchWithChatViewController.m in Sources */,
 				B12B5251187D3CEE00FA8AB4 /* HMAppDelegate.m in Sources */,
@@ -595,9 +622,12 @@
 				B12B52F3187E4C3E00FA8AB4 /* HMiPhoneDemoDefaultChatViewController.m in Sources */,
 				B12B52FE187E9BFE00FA8AB4 /* HMiPadDemoRootViewController.m in Sources */,
 				B12B527D187D40B100FA8AB4 /* HMiPhoneDemoArticleViewOptionsViewController.m in Sources */,
+				B12B530F187F9A4E00FA8AB4 /* HMiPadDemoSearchWithChatIfOperatorAvailableViewController.m in Sources */,
 				B12B52F6187E4C4600FA8AB4 /* HMiPhoneDemoArticleOnlyViewController.m in Sources */,
 				B12B5304187E9D1E00FA8AB4 /* HMiPadDemoHelpDeskOptionsViewController.m in Sources */,
+				B12B5310187F9A4E00FA8AB4 /* HMiPadDemoSearchWithChatViewController.m in Sources */,
 				B12B52F0187E436200FA8AB4 /* HMiPhoneDemoSearchWithChatIfOperatorAvailableViewController.m in Sources */,
+				B12B530A187F38CD00FA8AB4 /* HMiPadDemoSearchOnlyViewController.m in Sources */,
 				B12B5301187E9D0F00FA8AB4 /* HMiPadDemoLiveChatOptionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -277,6 +277,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Article View Options" id="FPw-aj-aay"/>
+                    <connections>
+                        <segue destination="zaf-cI-R0D" kind="push" identifier="articleonly" splitViewControllerTargetIndex="1" id="2J5-LQ-VAv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1go-PM-MRf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -432,6 +435,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Knowledge Base Options" id="QGe-Hz-NVx"/>
+                    <connections>
+                        <segue destination="RN2-Hl-aWs" kind="push" identifier="searchonly" splitViewControllerTargetIndex="1" id="XD1-LR-bwt"/>
+                        <segue destination="4W6-d1-QbY" kind="push" identifier="searchwithlivechat" splitViewControllerTargetIndex="1" id="gTE-YC-QBe"/>
+                        <segue destination="0Ly-mK-xXx" kind="push" identifier="searchwithlivechatoperator" splitViewControllerTargetIndex="1" id="tYp-40-XPw"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lyg-cz-Pfu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -522,10 +530,306 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Live Chat Options" id="lus-gx-v0b"/>
+                    <connections>
+                        <segue destination="0Kv-WE-LgL" kind="push" identifier="defaultchat" splitViewControllerTargetIndex="1" id="RmY-So-2kW"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m1W-ID-g6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3924" y="-2172"/>
+            <point key="canvasLocation" x="3258" y="83"/>
+        </scene>
+        <!--Mi Pad Demo Search Only View Controller - Search Only-->
+        <scene sceneID="BfT-TS-A9s">
+            <objects>
+                <viewController id="RN2-Hl-aWs" customClass="HMiPadDemoSearchOnlyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wi9-v5-qc4"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZUv-00-dti"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TDs-E6-39p">
+                        <rect key="frame" x="0.0" y="64" width="703" height="704"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Abk-Ds-41T">
+                                <rect key="frame" x="20" y="20" width="663" height="63"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">This class demonstrates launching a standard knowledge base search window as either a content view controller or a popover view controller. No chat button will be available, and articles will be displayed within your application.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Source:  HMiPhoneDemoSearchOnlyViewController.m" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="znc-Vs-kTG">
+                                <rect key="frame" x="20" y="91" width="663" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85y-Ug-84P">
+                                <rect key="frame" x="211" y="143" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Open Knowledge Base in Window">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="on_open_demo:" destination="RN2-Hl-aWs" eventType="touchUpInside" id="TAW-FM-eSz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Search Only" id="FKa-cx-baC">
+                        <barButtonItem key="backBarButtonItem" id="GXy-go-xRh"/>
+                        <barButtonItem key="rightBarButtonItem" title="Open Knowledge Base in Popover" id="uKw-Hj-LiM">
+                            <connections>
+                                <action selector="on_open_popover_demo:" destination="RN2-Hl-aWs" id="8ul-VH-6dQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="opendemo" destination="85y-Ug-84P" id="3Eq-En-c73"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qKZ-pD-aqm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3741" y="-3485"/>
+        </scene>
+        <!--Mi Pad Demo Search With Chat View Controller - Search Only-->
+        <scene sceneID="cQx-7X-Rnc">
+            <objects>
+                <viewController id="4W6-d1-QbY" customClass="HMiPadDemoSearchWithChatViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1j6-7s-ckE"/>
+                        <viewControllerLayoutGuide type="bottom" id="1N6-7W-fsf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Abn-Uz-3tC">
+                        <rect key="frame" x="0.0" y="64" width="703" height="704"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="nj3-cl-qCm">
+                                <rect key="frame" x="20" y="20" width="663" height="64"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">This class demonstrates launching a standard knowledge base search window as either a content view controller or a popover view controller. A chat button will always be available, and articles will be displayed within your application.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Source:  HMiPhoneDemoSearchWithChatViewController.m" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PqT-wo-2Bo">
+                                <rect key="frame" x="20" y="92" width="663" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zd-fD-8pE">
+                                <rect key="frame" x="211" y="144" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Open Knowledge Base in Window">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="on_open_demo:" destination="4W6-d1-QbY" eventType="touchUpInside" id="e3r-9T-p91"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Search Only" id="iWZ-Zb-BGv">
+                        <barButtonItem key="backBarButtonItem" id="1vM-hh-QZl"/>
+                        <barButtonItem key="rightBarButtonItem" title="Open Knowledge Base in Popover" id="QKa-eh-bAE">
+                            <connections>
+                                <action selector="on_open_popover_demo:" destination="4W6-d1-QbY" id="ASb-aF-5j8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="opendemo" destination="6zd-fD-8pE" id="heO-P9-lte"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VaT-gj-06a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5405" y="-3485"/>
+        </scene>
+        <!--Mi Pad Demo Search With Chat If Operator Available View Controller - Search Only-->
+        <scene sceneID="gba-DG-SZn">
+            <objects>
+                <viewController id="0Ly-mK-xXx" customClass="HMiPadDemoSearchWithChatIfOperatorAvailableViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VN2-Bs-8Nw"/>
+                        <viewControllerLayoutGuide type="bottom" id="LSb-rd-QDL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8TW-Bk-qiQ">
+                        <rect key="frame" x="0.0" y="64" width="703" height="704"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="daQ-HB-3MH">
+                                <rect key="frame" x="20" y="20" width="663" height="63"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">This class demonstrates launching a standard knowledge base search window as either a content view controller or as a popover view controller. A chat button will always be available, and articles will be displayed within your application.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Source:  HMiPhoneDemoSearchWithChatIfOperatorAvailableViewController.m" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jTw-OQ-8jN">
+                                <rect key="frame" x="20" y="91" width="663" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFf-0v-G6F">
+                                <rect key="frame" x="211" y="143" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Open Knowledge Base in Window">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="on_open_demo:" destination="0Ly-mK-xXx" eventType="touchUpInside" id="l55-X6-1Li"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Search Only" id="I5X-tj-sfM">
+                        <barButtonItem key="backBarButtonItem" title="&lt;" id="OCG-DI-SnM"/>
+                        <barButtonItem key="rightBarButtonItem" title="Open Knowledge Base in Popover" id="ilg-30-4Pe">
+                            <connections>
+                                <action selector="on_open_popover_demo:" destination="0Ly-mK-xXx" id="8Wc-z9-lOf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="opendemo" destination="NFf-0v-G6F" id="7bM-dH-5kF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g8e-jF-qit" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4597" y="-3485"/>
+        </scene>
+        <!--Mi Pad Demo Default Chat View Controller - Default Chat-->
+        <scene sceneID="LFg-8A-hvP">
+            <objects>
+                <viewController id="0Kv-WE-LgL" customClass="HMiPadDemoDefaultChatViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jVc-G8-YYh"/>
+                        <viewControllerLayoutGuide type="bottom" id="1ek-On-ARb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dbz-hA-ko6">
+                        <rect key="frame" x="0.0" y="64" width="703" height="704"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="This class demonstrates launching a standard live chat view as either a content view controller or a popover view controller." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hcM-ej-5Wx">
+                                <rect key="frame" x="20" y="20" width="663" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Source: HMiPadDemoDefaultChatViewController.m" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="hel-rv-hKR">
+                                <rect key="frame" x="20" y="77" width="663" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWQ-l5-lnc">
+                                <rect key="frame" x="191" y="126" width="321" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Open Live Chat in Window">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="on_open_demo:" destination="0Kv-WE-LgL" eventType="touchUpInside" id="ScN-bW-bRg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Default Chat" id="2G3-ng-1C4">
+                        <barButtonItem key="rightBarButtonItem" title="Open Live Chat in Popover" id="yLu-z6-Nee">
+                            <connections>
+                                <action selector="on_open_popover_demo:" destination="0Kv-WE-LgL" id="qCE-1V-EvQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="opendemo" destination="gWQ-l5-lnc" id="Gea-cN-FGn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2po-Xx-Wpy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4037" y="83"/>
+        </scene>
+        <!--Mi Pad Demo Article Only View Controller - Article Only-->
+        <scene sceneID="0qD-J9-PJb">
+            <objects>
+                <viewController id="zaf-cI-R0D" customClass="HMiPadDemoArticleOnlyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qFs-Cx-CfP"/>
+                        <viewControllerLayoutGuide type="bottom" id="iRa-IF-eQ3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xyI-WL-3Oc">
+                        <rect key="frame" x="0.0" y="64" width="703" height="704"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="PkM-7J-mna">
+                                <rect key="frame" x="20" y="20" width="663" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">This class demonstrates launching a standard knowledge base article in either a content view controller or a popover view controller. No chat button will be available.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Source: HMiPadDemoArticleOnlyViewController.m" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5C9-Ih-CYq">
+                                <rect key="frame" x="20" y="78" width="663" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ivd-jB-uOi">
+                                <rect key="frame" x="178" y="116" width="346" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Open Article in Window">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="on_open_demo:" destination="zaf-cI-R0D" eventType="touchUpInside" id="P7H-Qb-QSe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Article Only" id="fHJ-wQ-JeV">
+                        <barButtonItem key="rightBarButtonItem" title="Open Article in Popover" id="MZM-VR-xdg">
+                            <connections>
+                                <action selector="on_open_popover_demo:" destination="zaf-cI-R0D" id="l5b-fq-7yo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="opendemo" destination="Ivd-jB-uOi" id="cOH-1K-rqW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0n2-3n-New" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3797" y="-2408"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -86,6 +86,11 @@
  */
 @property (nonatomic, assign) BOOL disableKeyboardAdjustment;
 
+/**
+ * Set to YES to prevent the controller from automatically wrapping the help content with a meta viewport tag (defaults to NO). This is useful if you are using the content view controller in a non-full screen manner.
+ */
+@property (nonatomic, assign) BOOL disableViewportWrap;
+
 /** The HMContentHelpDeskSearchViewControllerDelegate for this search view.
  */
 @property (assign) id<HMContentHelpDeskSearchViewControllerDelegate> searchDelegate;
@@ -104,5 +109,19 @@
  * @param user The user identifier for this user. Can be set to nil if not in use.
  */
 -(id) initWithAppID:(NSString *)app andUser:(NSString *)user;
+
+/** Initializes the HMContentHelpDeskSearchViewController object to connect with a specific Hipmob app identifier. This
+ * will control which help desk the search runs through.
+ *
+ * The application identifier can be obtained from https://manage.hipmob.com/#apps and will
+ * let the Hipmob network identify the specific help desk you wish to searches to be run against.
+ * Typically there will be one application identifier for each app.
+ *
+ * @param app The Hipmob application identifier for this app.
+ * @param user The user identifier for this user. Can be set to nil if not in use.
+ * @param userInfo Additional connection information to be provided to the connection. Acceptable keys are {name},
+ * {email}, {context} and {pushtoken}.
+ */
+-(id) initWithAppID:(NSString *)app andUser:(NSString *)user andInfo:(NSDictionary *)userInfo;
 @end
 #endif

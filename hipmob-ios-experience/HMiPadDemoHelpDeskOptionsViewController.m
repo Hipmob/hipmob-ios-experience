@@ -96,11 +96,11 @@
 {
     NSString * opt = (NSString *)[self.menuItems objectAtIndex:[indexPath row]];
     if([@"searchonly" isEqualToString:opt]){
-        //[self performSegueWithIdentifier:@"searchonly" sender:self];
+        [self performSegueWithIdentifier:@"searchonly" sender:self];
     }else if([@"searchwithlivechat" isEqualToString:opt]){
-        //[self performSegueWithIdentifier:@"searchwithlivechat" sender:self];
+        [self performSegueWithIdentifier:@"searchwithlivechat" sender:self];
     }else if([@"searchwithlivechatoperator" isEqualToString:opt]){
-        //[self performSegueWithIdentifier:@"searchwithlivechatoperator" sender:self];
+        [self performSegueWithIdentifier:@"searchwithlivechatoperator" sender:self];
     }
 }
 @end

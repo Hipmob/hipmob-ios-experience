@@ -15,6 +15,9 @@
 #import "HMHelpDeskArticleViewController.h"
 #import "HMHelpDeskSearchViewController.h"
 #import "HMChatViewController.h"
+#import "HMContentHelpDeskArticleViewController.h"
+#import "HMContentHelpDeskSearchViewController.h"
+#import "HMContentChatViewController.h"
 
 /**
  * Implements a single, global Hipmob service object that can be used to provide convenient access to a number of
@@ -164,6 +167,14 @@
 -(HMChatViewController *)openChat:(UIViewController *)currentViewController withSetup:(void (^)(HMChatViewController *))setupBlock;
 
 /**
+ * Opens a chat window, customizes it using the specified setup block, and then displays it using pushViewController. This will also return the chat view controller so it can be used later.
+ *
+ * @param currentViewController The current view controller being displayed: the chat view will be presented from this view controller.
+ * @param setupBlock A block that is invoked to setup the chat view controller before it is displayed.
+ */
+-(HMContentChatViewController *)openChatWithPush:(UIViewController *)currentViewController withSetup:(void (^)(HMContentChatViewController *))setupBlock;
+
+/**
  * Opens a helpdesk search window and presents it using presentModalViewController. This will also return the help desk search view controller so it can be further customized.
  *
  * @param currentViewController The current view controller being displayed: the helpdesk search view will be presented from this view controller.
@@ -177,6 +188,14 @@
  * @param setupBlock A block that is invoked to setup the chat view controller before it is displayed.
  */
 -(HMHelpDeskSearchViewController *)openHelpdeskSearch:(UIViewController *)currentViewController withSetup:(void (^)(HMHelpDeskSearchViewController *))setupBlock;
+
+/**
+ * Opens a helpdesk search window, customizes it using the specified setup block, and displays it using pushViewController. This will also return the help desk search view controller so it can be used later.
+ *
+ * @param currentViewController The current view controller being displayed: the helpdesk search view will be presented from this view controller.
+ * @param setupBlock A block that is invoked to setup the chat view controller before it is displayed.
+ */
+-(HMContentHelpDeskSearchViewController *)openHelpdeskSearchWithPush:(UIViewController *)currentViewController withSetup:(void (^)(HMContentHelpDeskSearchViewController *))setupBlock;
 
 /**
  * Opens a helpdesk article and presents it using presentModalViewController. This will also return the help desk article view controller so it can be further customized.
@@ -195,5 +214,13 @@
  */
 -(HMHelpDeskArticleViewController *)openHelpdeskArticle:(NSString *)url fromCurrentView:(UIViewController *)currentViewController withSetup:(void (^)(HMHelpDeskArticleViewController *))setupBlock;
 
+/**
+ * Opens a helpdesk article, customizes it using the specified setup block, and displays it using pushViewController. This will also return the help desk article view controller so it can be used later.
+ *
+ * @param url The URL of the help desk article to be displayed.
+ * @param currentViewController The current view controller being displayed: the helpdesk search view will be presented from this view controller.
+ * @param setupBlock A block that is invoked to setup the chat view controller before it is displayed.
+ */
+-(HMContentHelpDeskArticleViewController *)openHelpdeskArticleWithPush:(NSString *)url fromCurrentView:(UIViewController *)currentViewController  withSetup:(void (^)(HMContentHelpDeskArticleViewController *))setupBlock;
 @end
 #endif

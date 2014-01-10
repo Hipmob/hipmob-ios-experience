@@ -145,6 +145,11 @@ typedef NS_ENUM(NSInteger, HMHelpDeskSearchChatEnabled){
 @property (nonatomic, assign) BOOL disableKeyboardAdjustment;
 
 /**
+ * Set to YES to prevent the controller from automatically wrapping the help content with a meta viewport tag (defaults to NO). This is useful if you are using the content view controller in a non-full screen manner.
+ */
+@property (nonatomic, assign) BOOL disableViewportWrap;
+
+/**
  * Sets the preferred status bar style.
  */
 @property (nonatomic, assign) UIStatusBarStyle overridePreferredStatusBarStyle;
