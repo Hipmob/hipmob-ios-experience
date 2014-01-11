@@ -11,7 +11,9 @@
 #import "hipmob/HMService.h"
 
 @interface HMiPadDemoSearchWithChatIfOperatorAvailableViewController ()
-
+{
+    HMHelpDeskSearchPopoverController * popover;
+}
 @end
 
 @implementation HMiPadDemoSearchWithChatIfOperatorAvailableViewController
@@ -40,6 +42,30 @@
 }
 
 - (IBAction)on_open_popover_demo:(id)sender {
+    [[HMService sharedService] openHelpdeskSearchInPopoverFromBarButtonItem:self.navigationItem.rightBarButtonItem inDirection:UIPopoverArrowDirectionUp withSetup:^(HMHelpDeskSearchPopoverController * controller){
+        // save the popover: when using ARC this prevents the popover from being prematurely released
+        popover = controller;
+        
+        // set the window title
+        controller.content.title = @"Help Search";
+        
+        // set the popover content size
+        if([controller.content respondsToSelector:@selector(setPreferredContentSize:)]){
+            controller.content.preferredContentSize = CGSizeMake(320, 240);
+        }else{
+            // iOS6 and below
+            controller.content.contentSizeForViewInPopover = CGSizeMake(320, 240);
+        }
+        
+        // ensure that the chat button is only shown if an operator is available
+        controller.content.chatEnabled = HMHelpDeskSearchChatEnabledIfOperatorAvailable;
+        
+        // pass through: this lets us interact
+        controller.passthroughViews = [[NSArray alloc] initWithObjects:self.view, nil];
+        
+        // sets the default query
+        controller.content.searchView.defaultQuery = @"iOS";
+    }];
 }
 
 - (IBAction)on_open_demo:(id)sender {
@@ -53,9 +79,6 @@
             controller.edgesForExtendedLayout = UIRectEdgeNone;
             controller.extendedLayoutIncludesOpaqueBars = YES;
         }
-        
-        // ensure that no chat window is shown
-        //controller.chatEnabled = HMHelpDeskSearchChatEnabledNever;
         
         // set the search view tag filter: this will apply to all searches from this search view controller
         //controller.searchView.tagFilter = @"live chat";

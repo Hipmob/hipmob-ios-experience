@@ -18,6 +18,9 @@
 #import "HMContentHelpDeskArticleViewController.h"
 #import "HMContentHelpDeskSearchViewController.h"
 #import "HMContentChatViewController.h"
+#import "HMHelpDeskArticleViewPopoverController.h"
+#import "HMHelpDeskSearchPopoverController.h"
+#import "HMChatPopoverController.h"
 
 /**
  * Implements a single, global Hipmob service object that can be used to provide convenient access to a number of
@@ -175,6 +178,28 @@
 -(HMContentChatViewController *)openChatWithPush:(UIViewController *)currentViewController withSetup:(void (^)(HMContentChatViewController *))setupBlock;
 
 /**
+ * Opens a chat window in a popover, customizes it using the specified setup block, and then displays it using presentPopoverFromRect. This will also return the chat view controller so it can be used later.
+ *
+ * @param currentView The UIView instance that the popover should be attached to.
+ * @param direction The direction the popover should be displayed in.
+ * @param setupBlock A block that is invoked to setup the chat view controller before it is displayed.
+ *
+ * @result The chat popover that was displayed.
+ */
+-(HMChatPopoverController *)openChatViewInPopoverFromCurrentView:(UIView *)currentView inDirection:(UIPopoverArrowDirection)direction withSetup:(void (^)(HMChatPopoverController *))setupBlock;
+
+/**
+ * Opens a chat window in a popover, customizes it using the specified setup block, and then displays it using presentPopoverFromBarButtonItem. This will also return the chat view controller so it can be used later.
+ *
+ * @param currentItem The UIBarButtonItem that the popover should be attached to.
+ * @param direction The direction the popover should be displayed in.
+ * @param setupBlock A block that is invoked to setup the chat view controller before it is displayed.
+ *
+ * @result The chat popover that was displayed.
+ */
+-(HMChatPopoverController *)openChatViewInPopoverFromBarButtonItem:(UIBarButtonItem *)currentItem inDirection:(UIPopoverArrowDirection)direction withSetup:(void (^)(HMChatPopoverController *))setupBlock;
+
+/**
  * Opens a helpdesk search window and presents it using presentModalViewController. This will also return the help desk search view controller so it can be further customized.
  *
  * @param currentViewController The current view controller being displayed: the helpdesk search view will be presented from this view controller.
@@ -198,29 +223,75 @@
 -(HMContentHelpDeskSearchViewController *)openHelpdeskSearchWithPush:(UIViewController *)currentViewController withSetup:(void (^)(HMContentHelpDeskSearchViewController *))setupBlock;
 
 /**
+ * Opens a help desk search window in a popover, customizes it using the specified setup block, and then displays it using presentPopoverFromRect. This will also return the help desk search view controller so it can be used later.
+ *
+ * @param currentView The UIView instance that the popover should be attached to.
+ * @param direction The direction the popover should be displayed in.
+ * @param setupBlock A block that is invoked to setup the search view controller before it is displayed.
+ *
+ * @result The help desk search view controller that was displayed.
+ */
+-(HMHelpDeskSearchPopoverController *)openHelpdeskSearchInPopoverFromCurrentView:(UIView *)currentView inDirection:(UIPopoverArrowDirection)direction withSetup:(void (^)(HMHelpDeskSearchPopoverController *))setupBlock;
+
+/**
+ * Opens a help desk search window in a popover, customizes it using the specified setup block, and then displays it using presentPopoverFromBarButtonItem. This will also return the help desk search view controller so it can be used later.
+ *
+ * @param currentItem The UIBarButtonItem that the popover should be attached to.
+ * @param direction The direction the popover should be displayed in.
+ * @param setupBlock A block that is invoked to setup the search view controller before it is displayed.
+ *
+ * @result The help desk search view controller that was displayed.
+ */
+-(HMHelpDeskSearchPopoverController *)openHelpdeskSearchInPopoverFromBarButtonItem:(UIBarButtonItem *)currentItem inDirection:(UIPopoverArrowDirection)direction withSetup:(void (^)(HMHelpDeskSearchPopoverController *))setupBlock;
+
+/**
  * Opens a helpdesk article and presents it using presentModalViewController. This will also return the help desk article view controller so it can be further customized.
  *
- * @param url The URL of the help desk article to be displayed.
+ * @param article The ID of the help desk article to be displayed.
  * @param currentViewController The current view controller being displayed: the helpdesk search view will be presented from this view controller.
  */
--(HMHelpDeskArticleViewController *)openHelpdeskArticle:(NSString *)url fromCurrentView:(UIViewController *)currentViewController;
+-(HMHelpDeskArticleViewController *)openHelpdeskArticle:(NSString *)article fromCurrentView:(UIViewController *)currentViewController;
 
 /**
  * Opens a helpdesk article, customizes it using the specified setup block, and presents it using presentModalViewController. This will also return the help desk article view controller so it can be used later.
  *
- * @param url The URL of the help desk article to be displayed.
+ * @param article The ID of the help desk article to be displayed.
  * @param currentViewController The current view controller being displayed: the helpdesk search view will be presented from this view controller.
  * @param setupBlock A block that is invoked to setup the chat view controller before it is displayed.
  */
--(HMHelpDeskArticleViewController *)openHelpdeskArticle:(NSString *)url fromCurrentView:(UIViewController *)currentViewController withSetup:(void (^)(HMHelpDeskArticleViewController *))setupBlock;
+-(HMHelpDeskArticleViewController *)openHelpdeskArticle:(NSString *)article fromCurrentView:(UIViewController *)currentViewController withSetup:(void (^)(HMHelpDeskArticleViewController *))setupBlock;
 
 /**
  * Opens a helpdesk article, customizes it using the specified setup block, and displays it using pushViewController. This will also return the help desk article view controller so it can be used later.
  *
- * @param url The URL of the help desk article to be displayed.
+ * @param article The ID of the help desk article to be displayed.
  * @param currentViewController The current view controller being displayed: the helpdesk search view will be presented from this view controller.
  * @param setupBlock A block that is invoked to setup the chat view controller before it is displayed.
  */
--(HMContentHelpDeskArticleViewController *)openHelpdeskArticleWithPush:(NSString *)url fromCurrentView:(UIViewController *)currentViewController  withSetup:(void (^)(HMContentHelpDeskArticleViewController *))setupBlock;
+-(HMContentHelpDeskArticleViewController *)openHelpdeskArticleWithPush:(NSString *)article fromCurrentView:(UIViewController *)currentViewController  withSetup:(void (^)(HMContentHelpDeskArticleViewController *))setupBlock;
+
+/**
+ * Opens a help desk article view in a popover, customizes it using the specified setup block, and then displays it using presentPopoverFromRect. This will also return the help desk article view controller so it can be used later.
+ *
+ * @param article The ID of the help desk article to be displayed.
+ * @param currentView The UIView instance that the popover should be attached to.
+ * @param direction The direction the popover should be displayed in.
+ * @param setupBlock A block that is invoked to setup the article view controller before it is displayed.
+ *
+ * @result The help desk article view controller that was displayed.
+ */
+-(HMHelpDeskArticleViewPopoverController *)openHelpdeskArticleInPopover:(NSString *)article fromCurrentView:(UIView *)currentView inDirection:(UIPopoverArrowDirection)direction withSetup:(void (^)(HMHelpDeskArticleViewPopoverController *))setupBlock;
+
+/**
+ * Opens a help desk article view in a popover, customizes it using the specified setup block, and then displays it using presentPopoverFromBarButtonItem. This will also return the help desk article view controller so it can be used later.
+ *
+ * @param article The ID of the help desk article to be displayed.
+ * @param currentItem The UIBarButtonItem that the popover should be attached to.
+ * @param direction The direction the popover should be displayed in.
+ * @param setupBlock A block that is invoked to setup the article view controller before it is displayed.
+ *
+ * @result The help desk article view controller that was displayed.
+ */
+-(HMHelpDeskArticleViewPopoverController *)openHelpdeskArticleInPopover:(NSString *)article fromBarButtonItem:(UIBarButtonItem *)currentItem inDirection:(UIPopoverArrowDirection)direction withSetup:(void (^)(HMHelpDeskArticleViewPopoverController *))setupBlock;
 @end
 #endif

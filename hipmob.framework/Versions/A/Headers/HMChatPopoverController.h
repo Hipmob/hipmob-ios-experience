@@ -62,11 +62,11 @@
  * After this call a private connection will be made to the Hipmob communication network for this
  * chat view. Not that when the view is dismissed the connection will be closed.
  *
- * @param view The view to attach the popover to.
+ * @param view The view or UIBarButtonItem to attach the popover to.
  * @param appid The Hipmob application identifier for this app.
  * @param user The user identifier for this user. Can be set to nil to use an internally generated id.
  */
--(id) initWithView:(UIView *)view andAppID:(NSString *)appid andUser:(NSString *)user;
+-(id) initWithView:(id)view andAppID:(NSString *)appid andUser:(NSString *)user;
 
 /** Initializes the HMChatPopoverController object to connect with a specific Hipmob app identifier. By default
  * support messages will be shown (messages sent to/from the Hipmob app's operators).
@@ -77,13 +77,13 @@
  * After this call a private connection will be made to the Hipmob communication network for this
  * chat view. Not that when the view is dismissed the connection will be closed.
  *
- * @param view The view to attach the popover to.
+ * @param view The view or UIBarButtonItem to attach the popover to.
  * @param appid The Hipmob application identifier for this app.
  * @param user The user identifier for this user. Can be set to nil to use an internally generated id.
  * @param info Additional connection information to be provided to the connection. Acceptable keys are *name*,
  * *email*, *context* and *pushtoken*.
  */
--(id) initWithView:(UIView *)view andAppID:(NSString *)appid andUser:(NSString *)user andInfo:(NSDictionary *)info;
+-(id) initWithView:(id)view andAppID:(NSString *)appid andUser:(NSString *)user andInfo:(NSDictionary *)info;
 
 /** Initializes the HMChatPopoverController object to connect with a specific Hipmob app identifier and to show
  * messages to/from a specific peer.
@@ -94,12 +94,12 @@
  * After this call a private connection will be made to the Hipmob communication network for this
  * chat view. Not that when the view is dismissed the connection will be closed.
  *
- * @param view The view to attach the popover to.
+ * @param view The view or UIBarButtonItem to attach the popover to.
  * @param appid The Hipmob application identifier for this app.
  * @param user The user identifier for this user. For peer messaging the user identifier MUST NOT be nil.
  * @param peer The device identifier for the peer.
  */
--(id) initWithView:(UIView *)view andAppID:(NSString *)appid andUser:(NSString *)user andPeer:(NSString*)peer;
+-(id) initWithView:(id)view andAppID:(NSString *)appid andUser:(NSString *)user andPeer:(NSString*)peer;
 
 ///------------------------------------------------------------------------------------------
 /// @name Position and Size

@@ -11,7 +11,9 @@
 #import "hipmob/HMService.h"
 
 @interface HMiPadDemoDefaultChatViewController ()
-
+{
+    HMChatPopoverController * popover;
+}
 @end
 
 @implementation HMiPadDemoDefaultChatViewController
@@ -39,7 +41,26 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)on_open_popover_demo:(id)sender {
+- (IBAction)on_open_popover_demo:(id)sender
+{
+    [[HMService sharedService] openChatViewInPopoverFromBarButtonItem:self.navigationItem.rightBarButtonItem inDirection:UIPopoverArrowDirectionUp withSetup:^(HMChatPopoverController * controller){
+        // save the popover: when using ARC this prevents the popover from being prematurely released
+        popover = controller;
+        
+        // set the window title
+        controller.content.title = @"Chat with an Operator";
+        
+        // set the popover content size
+        if([controller.content respondsToSelector:@selector(setPreferredContentSize:)]){
+            controller.content.preferredContentSize = CGSizeMake(320, 240);
+        }else{
+            // iOS6 and below
+            controller.content.contentSizeForViewInPopover = CGSizeMake(320, 240);
+        }
+        
+        // pass through: this lets us interact
+        controller.passthroughViews = [[NSArray alloc] initWithObjects:self.view, nil];
+    }];
 }
 
 - (IBAction)on_open_demo:(id)sender {

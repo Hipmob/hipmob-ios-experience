@@ -10,8 +10,10 @@
 #import "HMiPhoneConfig.h"
 #import "hipmob/HMService.h"
 
-@interface HMiPadDemoSearchOnlyViewController ()
-
+@interface HMiPadDemoSearchOnlyViewController () <HMContentHelpDeskSearchViewControllerDelegate>
+{
+    HMHelpDeskSearchPopoverController * popover;
+}
 @end
 
 @implementation HMiPadDemoSearchOnlyViewController
@@ -39,7 +41,32 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)on_open_popover_demo:(id)sender {
+- (IBAction)on_open_popover_demo:(id)sender
+{
+    [[HMService sharedService] openHelpdeskSearchInPopoverFromBarButtonItem:self.navigationItem.rightBarButtonItem inDirection:UIPopoverArrowDirectionUp withSetup:^(HMHelpDeskSearchPopoverController * controller){
+        // save the popover: when using ARC this prevents the popover from being prematurely released
+        popover = controller;
+        
+        // set the window title
+        controller.content.title = @"Help Search";
+        
+        // set the popover content size
+        if([controller.content respondsToSelector:@selector(setPreferredContentSize:)]){
+            controller.content.preferredContentSize = CGSizeMake(320, 240);
+        }else{
+            // iOS6 and below
+            controller.content.contentSizeForViewInPopover = CGSizeMake(320, 240);
+        }
+        
+        // ensure that the chat button is never shown
+        controller.content.chatEnabled = HMHelpDeskSearchChatEnabledNever;
+        
+        // pass through: this lets us interact
+        controller.passthroughViews = [[NSArray alloc] initWithObjects:self.view, nil];
+        
+        // sets the default query
+        controller.content.searchView.defaultQuery = @"iOS";
+    }];
 }
 
 - (IBAction)on_open_demo:(id)sender {
@@ -62,6 +89,14 @@
         
         // sets the default query
         controller.searchView.defaultQuery = @"iOS";
+        
+        // and we're the delegate
+        controller.searchDelegate = self;
     }];
+}
+
+-(void)contentSearchViewController:(id)contentSearchViewController willRenderResults:(NSMutableArray *)results forQuery:(NSString *)query
+{
+    NSLog(@"For %@: %@", query, results);
 }
 @end

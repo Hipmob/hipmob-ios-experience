@@ -15,7 +15,7 @@
  */
 @protocol HMContentHelpDeskSearchViewControllerDelegate <NSObject>;
 
-@required
+@optional
 /** Tells the delegate that a specific article was selected. The delegate may choose to handle the article itself: if it does, it should
  * return TRUE or YES. If the delegate does not implement this method or if it returns FALSE or NO (i.e. it either does not handle
  * URLs of this format or if it doesn't want to implement any special logic) then the URL will be opened in a private WebView.
@@ -31,7 +31,16 @@
  */
 -(BOOL)contentSearchViewController:(id)contentSearchViewController didSelectArticle:(NSString *)id withTitle:(NSString *)title andURL:(NSString *)url andBaseURL:(NSString *)baseURL andContent:(NSString *)content;
 
-@optional
+/** Provides the delegate with an array of results that are about to be displayed to the user. The delegate may choose
+ * to alter the array to remove specific results or to adjust the sort order. The search view caches search results
+ * on a per-query basis: for any specific query this delegate callback will be invoked at most once. The array will contain HMSearchResultRow instances.
+ *
+ * @param contentSearchViewController The HMHelpDeskSearchView instance that generated the event.
+ * @param results The search results: this is an array of HMSearchResultRow instances.
+ * @param query The query that produced these results.
+ */
+-(void)contentSearchViewController:(id)contentSearchViewController willRenderResults:(NSMutableArray *)results forQuery:(NSString *)query;
+
 /**
  * Tells the delegate that an error occured in the underlying search view
  *

@@ -11,7 +11,9 @@
 #import "hipmob/HMService.h"
 
 @interface HMiPadDemoArticleOnlyViewController ()
-
+{
+    HMHelpDeskArticleViewPopoverController * popover;
+}
 @end
 
 @implementation HMiPadDemoArticleOnlyViewController
@@ -40,6 +42,26 @@
 }
 
 - (IBAction)on_open_popover_demo:(id)sender {
+    [[HMService sharedService] openHelpdeskArticleInPopover:ARTICLEID fromBarButtonItem:self.navigationItem.rightBarButtonItem inDirection:UIPopoverArrowDirectionUp withSetup:^(HMHelpDeskArticleViewPopoverController * controller){
+        // save the popover: when using ARC this prevents the popover from being prematurely released
+        popover = controller;
+        
+        // title is set by default to the article title.
+        
+        // set the popover content size
+        if([controller.content respondsToSelector:@selector(setPreferredContentSize:)]){
+            controller.content.preferredContentSize = CGSizeMake(320, 240);
+        }else{
+            // iOS6 and below
+            controller.content.contentSizeForViewInPopover = CGSizeMake(320, 240);
+        }
+        
+        // pass through: this lets us interact
+        controller.passthroughViews = [[NSArray alloc] initWithObjects:self.view, nil];
+        
+        // disable the chat view
+        controller.content.chatEnabled = HMHelpDeskArticleChatEnabledNever;
+    }];
 }
 
 - (IBAction)on_open_demo:(id)sender {

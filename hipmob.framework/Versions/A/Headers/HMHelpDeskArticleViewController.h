@@ -92,6 +92,12 @@ typedef NS_ENUM(NSInteger, HMHelpDeskArticleChatEnabled){
  */
 @property (nonatomic, assign) HMHelpDeskArticleChatEnabled chatEnabled;
 
+/**
+ * Sets/return the extra UIBarButtonItems to be shown on the right for this controller. If this is nil
+ * then no extra button items are shown.
+ */
+@property(nonatomic, copy) NSArray * extraBarButtonItems;
+
 /** The HMHelpDeskArticleViewControllerDelegate for this article view.
  */
 @property (assign) id<HMHelpDeskArticleViewControllerDelegate> viewDelegate;

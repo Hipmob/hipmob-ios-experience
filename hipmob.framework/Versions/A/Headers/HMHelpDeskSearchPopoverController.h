@@ -82,13 +82,13 @@
  * will be made to see if any operators are online for the specified Hipmob app: if there are operators
  * available then a chat button will also be shown.
  *
- * @param view The view to attach the popover to.
+ * @param view The view or UIBarButtonItem to attach the popover to.
  * @param app The Hipmob application identifier for this app.
  * @param user The user identifier for this user. Can be set to nil to use an internally generated id.
  * @param userInfo Additional connection information to be provided to the connection. Acceptable keys are {name},
  * {email}, {context} and {pushtoken}.
  */
--(id) initWithView:(UIView *)view andAppID:(NSString *)app andUser:(NSString *)user andInfo:(NSDictionary *)userInfo;
+-(id) initWithView:(id)view andAppID:(NSString *)app andUser:(NSString *)user andInfo:(NSDictionary *)userInfo;
 
 ///------------------------------------------------------------------------------------------
 /// @name Position and Size
