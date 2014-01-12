@@ -50,7 +50,7 @@
         //controller.searchView.tagFilter = @"live chat";
         
         // sets the default query
-        controller.searchView.defaultQuery = @"iOS";
+        controller.searchView.defaultQuery = @"ids:all";
     }];
 }
 @end

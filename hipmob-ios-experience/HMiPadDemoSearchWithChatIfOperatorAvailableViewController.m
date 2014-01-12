@@ -64,7 +64,7 @@
         controller.passthroughViews = [[NSArray alloc] initWithObjects:self.view, nil];
         
         // sets the default query
-        controller.content.searchView.defaultQuery = @"iOS";
+        controller.content.searchView.defaultQuery = @"ids:all";
     }];
 }
 
@@ -84,7 +84,7 @@
         //controller.searchView.tagFilter = @"live chat";
         
         // sets the default query
-        controller.searchView.defaultQuery = @"iOS";
+        controller.searchView.defaultQuery = @"ids:all";
     }];
 }
 @end

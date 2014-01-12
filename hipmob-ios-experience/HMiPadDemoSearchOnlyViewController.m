@@ -65,7 +65,7 @@
         controller.passthroughViews = [[NSArray alloc] initWithObjects:self.view, nil];
         
         // sets the default query
-        controller.content.searchView.defaultQuery = @"iOS";
+        controller.content.searchView.defaultQuery = @"ids:all";
     }];
 }
 
@@ -88,7 +88,7 @@
         //controller.searchView.tagFilter = @"live chat";
         
         // sets the default query
-        controller.searchView.defaultQuery = @"iOS";
+        controller.searchView.defaultQuery = @"ids:all";
         
         // and we're the delegate
         controller.searchDelegate = self;
@@ -97,6 +97,6 @@
 
 -(void)contentSearchViewController:(id)contentSearchViewController willRenderResults:(NSMutableArray *)results forQuery:(NSString *)query
 {
-    NSLog(@"For %@: %@", query, results);
+    //NSLog(@"For %@: %@", query, results);
 }
 @end

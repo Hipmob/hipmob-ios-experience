@@ -47,7 +47,7 @@
         controller.chatEnabled = HMHelpDeskSearchChatEnabledAlways;
         
         // sets the default query
-        controller.searchView.defaultQuery = @"iOS";
+        controller.searchView.defaultQuery = @"ids:all";
     }];
 }
 @end
