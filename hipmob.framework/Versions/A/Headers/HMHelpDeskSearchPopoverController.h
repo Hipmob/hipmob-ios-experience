@@ -34,7 +34,7 @@
  
     helpdesk2.content.navigationBar.tintColor = [UIColor colorWithRed:236.0/255.0 green:244.0/255.0 blue:243.0/255.0 alpha:1];
     helpdesk2.content.searchView.defaultQuery = @"iOS";
-    helpdesk2.content.contentSizeForViewInPopover = CGSizeMake(320, 240);
+    helpdesk2.popoverContentSize = CGSizeMake(320, 240);
     helpdesk2.passthroughViews = [[NSArray alloc] initWithObjects:self.view, nil];
     helpdesk2.content.searchDelegate = self;
     [helpdesk2 presentPopoverFromBarButtonItem:(UIBarButtonItem *)sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];

@@ -65,7 +65,7 @@ typedef NS_ENUM(NSInteger, HMHelpDeskSearchChatEnabled){
 /**
  * Tells the delegate that the chat button has been displayed, and passes the button so additional styling can be applied.
  *
- * @param searchViewController The HMHelpDeskSearchViewController instance that received the error.
+ * @param searchViewController The HMHelpDeskSearchViewController instance that showed the chat button.
  * @param chatButton The UIButton added to the navigation bar.
  */
 -(void)searchViewController:(id)searchViewController hasShownChatButton:(UIButton *)chatButton;

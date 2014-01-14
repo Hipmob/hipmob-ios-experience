@@ -51,13 +51,8 @@
         controller.content.title = @"Help Search";
         
         // set the popover content size
-        if([controller.content respondsToSelector:@selector(setPreferredContentSize:)]){
-            controller.content.preferredContentSize = CGSizeMake(320, 240);
-        }else{
-            // iOS6 and below
-            controller.content.contentSizeForViewInPopover = CGSizeMake(320, 240);
-        }
-        
+        controller.popoverContentSize = CGSizeMake(320, 240);
+                
         // ensure that the chat button is never shown
         controller.content.chatEnabled = HMHelpDeskSearchChatEnabledNever;
         
@@ -81,8 +76,11 @@
             controller.extendedLayoutIncludesOpaqueBars = YES;
         }
         
+        // hide the back button
+        controller.navigationItem.hidesBackButton = YES;
+        
         // ensure that no chat window is shown
-        //controller.chatEnabled = HMHelpDeskSearchChatEnabledNever;
+        controller.chatEnabled = HMContentHelpDeskSearchChatEnabledNever;
         
         // set the search view tag filter: this will apply to all searches from this search view controller
         //controller.searchView.tagFilter = @"live chat";

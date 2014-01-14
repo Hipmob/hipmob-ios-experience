@@ -41,6 +41,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)clickButton1:(id)sender {
+    NSLog(@"Click extra button 1");
+}
+
+- (IBAction)clickButton2:(id)sender {
+    NSLog(@"Click extra button 2");
+}
+
 - (IBAction)on_open_popover_demo:(id)sender
 {
     [[HMService sharedService] openChatViewInPopoverFromBarButtonItem:self.navigationItem.rightBarButtonItem inDirection:UIPopoverArrowDirectionUp withSetup:^(HMChatPopoverController * controller){
@@ -51,15 +59,19 @@
         controller.content.title = @"Chat with an Operator";
         
         // set the popover content size
-        if([controller.content respondsToSelector:@selector(setPreferredContentSize:)]){
-            controller.content.preferredContentSize = CGSizeMake(320, 240);
-        }else{
-            // iOS6 and below
-            controller.content.contentSizeForViewInPopover = CGSizeMake(320, 240);
-        }
+        controller.popoverContentSize = CGSizeMake(320, 240);
         
+        // hide the availability indicator
+        //controller.content.hidesAvailabilityIndicator = YES;
+
         // pass through: this lets us interact
         controller.passthroughViews = [[NSArray alloc] initWithObjects:self.view, nil];
+        
+        // extra bar buttons
+        UIBarButtonItem * one = [[UIBarButtonItem alloc] initWithTitle:@"One" style:UIBarButtonItemStylePlain target:self action:@selector(clickButton1:)];
+        UIBarButtonItem * two = [[UIBarButtonItem alloc] initWithTitle:@"Two" style:UIBarButtonItemStylePlain target:self action:@selector(clickButton2:)];
+        
+        controller.content.extraBarButtonItems = @[one, two];
     }];
 }
 
@@ -68,6 +80,15 @@
     [[HMService sharedService] openChatWithPush:self withSetup:^(HMContentChatViewController * controller){
         // set the title of the chat window
         controller.title = @"Chat with an Operator";
+        
+        // no back button
+        controller.navigationItem.hidesBackButton = YES;
+        
+        // extra bar buttons
+        UIBarButtonItem * one = [[UIBarButtonItem alloc] initWithTitle:@"One" style:UIBarButtonItemStylePlain target:self action:@selector(clickButton1:)];
+        UIBarButtonItem * two = [[UIBarButtonItem alloc] initWithTitle:@"Two" style:UIBarButtonItemStylePlain target:self action:@selector(clickButton2:)];
+        
+        controller.extraBarButtonItems = @[one, two];
     }];
 }
 @end

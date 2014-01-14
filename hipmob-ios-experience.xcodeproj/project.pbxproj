@@ -27,7 +27,7 @@
 		B12B5280187D40D400FA8AB4 /* HMiPhoneDemoLiveChatOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12B527F187D40D400FA8AB4 /* HMiPhoneDemoLiveChatOptionsViewController.m */; };
 		B12B5283187DBE0000FA8AB4 /* HMiPhoneDemoSearchOnlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12B5282187DBE0000FA8AB4 /* HMiPhoneDemoSearchOnlyViewController.m */; };
 		B12B5288187E1ED700FA8AB4 /* hipmob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B12B5287187E1ED700FA8AB4 /* hipmob.framework */; };
-		B12B528A187E1EF500FA8AB4 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B12B5289187E1EF500FA8AB4 /* CoreTelephony.framework */; };
+		B12B528A187E1EF500FA8AB4 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B12B5289187E1EF500FA8AB4 /* CoreTelephony.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		B12B528C187E1F1200FA8AB4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B12B528B187E1F1200FA8AB4 /* CoreData.framework */; };
 		B12B528E187E1F1A00FA8AB4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B12B528D187E1F1A00FA8AB4 /* Security.framework */; };
 		B12B5290187E1F2500FA8AB4 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B12B528F187E1F2500FA8AB4 /* libicucore.dylib */; };
@@ -775,7 +775,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "arm64 armv7 armv7s x86_64";
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -795,7 +795,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				VALID_ARCHS = "arm64 armv7 armv7s x86_64";
+				VALID_ARCHS = "arm64 armv7 armv7s x86_64 i386";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

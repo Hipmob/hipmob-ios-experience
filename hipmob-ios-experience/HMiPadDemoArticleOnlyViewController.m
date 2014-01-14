@@ -49,18 +49,20 @@
         // title is set by default to the article title.
         
         // set the popover content size
+        controller.popoverContentSize = CGSizeMake(320, 240);
+        /*
         if([controller.content respondsToSelector:@selector(setPreferredContentSize:)]){
             controller.content.preferredContentSize = CGSizeMake(320, 240);
         }else{
             // iOS6 and below
             controller.content.contentSizeForViewInPopover = CGSizeMake(320, 240);
         }
-        
+        */
         // pass through: this lets us interact
         controller.passthroughViews = [[NSArray alloc] initWithObjects:self.view, nil];
         
         // disable the chat view
-        controller.content.chatEnabled = HMHelpDeskArticleChatEnabledNever;
+        controller.content.body.chatEnabled = HMContentHelpDeskArticleChatEnabledNever;
     }];
 }
 
@@ -69,8 +71,11 @@
     [[HMService sharedService] openHelpdeskArticleWithPush:ARTICLEID fromCurrentView:self withSetup:^(HMContentHelpDeskArticleViewController * controller){
         // the title is set by default to the article title
         
+        // hide the back button
+        controller.navigationItem.hidesBackButton = YES;
+        
         // disable the chat view
-        //controller.chatEnabled = HMHelpDeskArticleChatEnabledNever;
+        controller.chatEnabled = HMContentHelpDeskArticleChatEnabledAlways; //Never;
     }];
 }
 @end

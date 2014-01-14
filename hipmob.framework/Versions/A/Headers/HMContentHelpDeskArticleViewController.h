@@ -10,6 +10,27 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ * An enumeration that controls whether or not the chat button is shown in the HMHelpDeskArticleViewController's navigation bar.
+ */
+typedef NS_ENUM(NSInteger, HMContentHelpDeskArticleChatEnabled){
+    /**
+     * Always show the chat button.
+     */
+    HMContentHelpDeskArticleChatEnabledAlways            = 0,
+    
+    /**
+     * Only show the chat button if an operator is available.
+     */
+    HMContentHelpDeskArticleChatEnabledIfOperatorAvailable = 1,
+    
+    /**
+     * Never show the chat button.
+     */
+    HMContentHelpDeskArticleChatEnabledNever             = 2
+};
+
+
 /** The HMContentHelpDeskArticleViewControllerDelegate protocol defines the optional methods implemented by delegates of HMContentHelpDeskArticleViewController instances. 
  */
 @protocol HMContentHelpDeskArticleViewControllerDelegate <NSObject>;
@@ -43,6 +64,23 @@
  * @param contentArticleViewController The HMContentHelpDeskArticleViewController instance that is closing.
  */
 -(void)contentArticleViewControllerWillDismiss:(id)contentArticleViewController;
+
+/**
+ * Tells the delegate that the chat button has been displayed, and passes the button so additional styling can be applied.
+ *
+ * @param contentArticleViewController The HMContentHelpDeskArticleViewController instance that showed the chat button.
+ * @param chatButton The UIButton added to the navigation bar.
+ */
+-(void)contentArticleViewController:(id)contentArticleViewController hasShownChatButton:(UIButton *)chatButton;
+
+/**
+ * Tells the delegate that the user is about to open a chat window.
+ *
+ * @param contentArticleViewController The HMContentHelpDeskArticleViewController instance that opened the chat window.
+ * @param chatViewController The HMContentChatViewController instance that opened.
+ */
+-(void)contentArticleViewController:(id)contentArticleViewController willOpenChat:(id)chatViewController;
+
 @end
 
 /**
@@ -52,6 +90,11 @@
 {
 
 }
+
+/**
+ * A constant indicating the conditions under which the chat button should be displayed. See [HMContentHelpDeskArticleChatEnabled](../Constants/HMContentHelpDeskArticleChatEnabled.html) for descriptions of these constants. The user id passed when the search view was initialized must NOT be nil for the chat button to appear.
+ */
+@property (nonatomic, assign) HMContentHelpDeskArticleChatEnabled chatEnabled;
 
 /**
  * Returns the actual webview that shows the article.
@@ -77,6 +120,12 @@
  * Set to YES to prevent the controller from adjusting for keyboard show/hide (defaults to NO). This is particularly useful when embedding in popover view controllers.
  */
 @property (nonatomic, assign) BOOL disableKeyboardAdjustment;
+
+/**
+ * Sets/return the extra UIBarButtonItems to be shown on the right for this controller. If this is nil
+ * then no extra button items are shown.
+ */
+@property(nonatomic, copy) NSArray * extraBarButtonItems;
 
 /** The HMContentHelpDeskArticleViewControllerDelegate for this view controller.
  */

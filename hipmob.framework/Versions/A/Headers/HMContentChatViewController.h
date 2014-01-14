@@ -136,6 +136,17 @@
  */
 @property (nonatomic, assign) BOOL disableKeyboardAdjustment;
 
+/**
+ * Set to YES to prevent the controller from showing the availability indicator.
+ */
+@property (nonatomic, assign) BOOL hidesAvailabilityIndicator;
+
+/**
+ * Sets/return the extra UIBarButtonItems to be shown on the right for this controller. If this is nil
+ * then no extra button items are shown.
+ */
+@property(nonatomic, copy) NSArray * extraBarButtonItems;
+
 /** The HMContentChatViewControllerDelegate for this chat view.
  */
 @property (assign) id<HMContentChatViewControllerDelegate> chatDelegate;
