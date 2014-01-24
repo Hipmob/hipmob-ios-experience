@@ -273,6 +273,9 @@
  
  HMChatView is a custom UIView that renders a Hipmob chat conversation. It provides a set of delegate callbacks that allow the view controller to be notified of changes in the connection to the Hipmob remote connection (if it was created by this class). If the remote connection was supplied to the view then no delegate callbacks will occur based on changes in the connection: this allows a global connection to be used by multiple views.
  
+ <h2>Connecting to the Hipmob chat network</h2>
+ Once the chat view is fully setup, you'll need to call the connect method to actually connect to the Hipmob chat network. Typically this can be called from the enclosing view controller's viewDidAppear method. Once the user starts typing a message then the connect method will be invoked if necessary.
+ 
  <h2>Customizing the messages</h2>
  By default, the HMChatView control emulates the iOS Messages interface, and provides properties to let the fonts and text colors be customized. For applications that require additional customization, the [HMChatViewDelegate chatView:cellForMessageRow:withTableView:] and [HMChatViewDelegate chatView:heightForMessageRow:withTableView:] methods of the HMChatViewDelegate protocol allow complete control over the appearance of each row.
 
@@ -458,6 +461,12 @@
  * @param peer The user identifier for the peer to be communicated with.
  */
 -(id) initWithFrame:(CGRect)frame andConnection:(HMRemoteConnection *)connection andPeer:(NSString*)peer;
+
+/** Sets the Hipmob operator group this chat view should communicate with. This must be set before the connect selector is called.
+ *
+ * @param group The Hipmob operator group this chat view should communicate with.
+ */
+-(void)setGroup:(NSString *)group;
 
 /** Clears a custom data attribute from this chat view's connection.
  *

@@ -84,6 +84,9 @@
         // no back button
         controller.navigationItem.hidesBackButton = YES;
         
+        // speak to a specific group
+        //[controller.chatView setGroup:@"group-identifier"];
+        
         // extra bar buttons
         UIBarButtonItem * one = [[UIBarButtonItem alloc] initWithTitle:@"One" style:UIBarButtonItemStylePlain target:self action:@selector(clickButton1:)];
         UIBarButtonItem * two = [[UIBarButtonItem alloc] initWithTitle:@"Two" style:UIBarButtonItemStylePlain target:self action:@selector(clickButton2:)];

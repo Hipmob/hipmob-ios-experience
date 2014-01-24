@@ -42,6 +42,8 @@
     [[HMService sharedService] openChat:self withSetup:^(HMChatViewController * controller){
         // set the title of the chat window
         controller.body.title = @"Chat with an Operator";
+        
+        controller.chatView.sentTextColor = [UIColor redColor];
     }];
 }
 @end

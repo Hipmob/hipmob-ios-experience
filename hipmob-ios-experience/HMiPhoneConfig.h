@@ -12,11 +12,11 @@
 /**
  * The Hipmob App ID to use.
  */
-#define     APPID           @"2ea7d86854df4ca185af84e68ea72fe1"
+#define     APPID           @"b937e4b524f84fde963da380b948c227"
 
 /**
  * The article within the app to show.
  */
-#define     ARTICLEID       @"175b05d802774d2eb55f6f5c1b5adfad"
+#define     ARTICLEID       @"7dff763e41074ca3b238472c6aaa0ef7"
 
 #endif

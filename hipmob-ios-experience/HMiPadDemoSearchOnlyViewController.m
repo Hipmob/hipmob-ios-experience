@@ -59,6 +59,8 @@
         // pass through: this lets us interact
         controller.passthroughViews = [[NSArray alloc] initWithObjects:self.view, nil];
         
+        controller.content.disableWebViewGestures = YES;
+        
         // sets the default query
         controller.content.searchView.defaultQuery = @"ids:all";
     }];

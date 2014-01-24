@@ -43,7 +43,7 @@
         // the title is set by default to the article title
         
         // disable the chat view
-        controller.body.chatEnabled = HMContentHelpDeskArticleChatEnabledNever;
+        controller.body.chatEnabled = HMContentHelpDeskArticleChatEnabledAlways; //Never;
     }];
 }
 @end
