@@ -11,10 +11,10 @@ This project provides a detailed set of examples for the features supported by t
 
         #include <hipmob/HMChatViewController.h>
 
-4. then create the controller and present it. You'll need to use your Hipmob application ID [Get it by signing up here](https://manage.hipmob.com/register). For example, if the application ID was "2ea7d86854df4ca185af84e68ea72fe1":
+4. then create the controller and present it. You'll need to use your Hipmob application ID [Get it by signing up here](https://manage.hipmob.com/register). For example, if the application ID was "3e059479fc6e4437a4e955d56081bc73" (which you can use without signing up - it's a live demo):
 
         // initialize it with the appropriate app identifier, taken from the Hipmob console at https://manage.hipmob.com/#apps  
-        HMChatViewController * livechat = [[HMChatViewController alloc] initWithAppID:@"2ea7d86854df4ca185af84e68ea72fe1" andUser:nil];  
+        HMChatViewController * livechat = [[HMChatViewController alloc] initWithAppID:@"3e059479fc6e4437a4e955d56081bc73" andUser:nil];  
  
         // the HMChatViewController is a UINavigationController, so we have access to all the navigation controller fields  
         // adjust the navigation bar's tint color to match the applications color  
