@@ -1,7 +1,9 @@
 hipmob-ios-experience
 =====================
 
-This project provides a detailed set of examples for the features supported by the Hipmob iOS library. Hipmob allows you to embed your entire FAQ (including Zendesk or Desk.com if you use those) into your iPhone, Android or iPad app.
+This project provides a detailed set of examples for the features supported by the Hipmob iOS library. Hipmob allows you to embed your entire FAQ (including Zendesk or Desk.com if you use those) into your iPhone, Android or iPad app. 
+
+[1 minute demo (youtube) here >>](youtube.com/watch?v=ZOLpeJoYdEM)
 
 **Quick Start**
 
