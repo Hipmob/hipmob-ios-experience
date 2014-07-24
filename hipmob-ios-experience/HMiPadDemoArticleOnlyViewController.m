@@ -63,7 +63,7 @@
         
         // disable the chat view
         controller.content.body.chatEnabled = HMContentHelpDeskArticleChatEnabledNever;
-    }];
+    } forApp:APPID];
 }
 
 - (IBAction)on_open_demo:(id)sender {
@@ -76,6 +76,6 @@
         
         // disable the chat view
         controller.chatEnabled = HMContentHelpDeskArticleChatEnabledAlways; //Never;
-    }];
+    } forApp:APPID];
 }
 @end

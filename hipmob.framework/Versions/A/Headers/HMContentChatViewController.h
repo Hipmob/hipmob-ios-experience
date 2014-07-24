@@ -47,6 +47,24 @@
 -(void)contentChatViewController:(id)contentChatViewController didReceiveMessage:(HMChatMessage *)message;
 
 /**
+ * Tells the delegate that a JSON message we care about was received.
+ *
+ * @param contentChatViewController The HMContentChatViewController instance that received the message.
+ * @param message The message that was received.
+ * @param contents An NSDictionary, NSArray, NSString or NSNumber that represents the JSON contents that were received.
+ */
+-(void)contentChatViewController:(id)contentChatViewController didReceiveMessage:(HMChatMessage *)message withContents:(id)contents;
+
+/**
+ * Tells the delegate that a binary message we care about was received.
+ *
+ * @param contentChatViewController The HMContentChatViewController instance that received the message.
+ * @param message The message that was received.
+ * @param contents An NSData instance that represents the binary contents that were received.
+ */
+-(void)contentChatViewController:(id)contentChatViewController didReceiveMessage:(HMChatMessage *)message withData:(NSData *)contents;
+
+/**
  * Tells the delegate that a message we care about was sent.
  *
  * @param contentChatViewController The HMContentChatViewController instance that received the message.
@@ -90,6 +108,40 @@
  * @param peer The peer that wend offline.
  */
 -(void)contentChatViewController:(id)contentChatViewController didPeerGoOffline:(NSString *)peer;
+
+/**
+ * Tells the delegate that a specific picture message was clicked.
+ *
+ * @param contentChatViewController The HMContentChatViewController instance that generated the click.
+ * @param message The message that was clicked. The actual image can be loaded from the file specified in the "file" entry in the message attributes dictionary.
+ *
+ * @result TRUE If the delegate handled the URL and no further action should be taken, FALSE otherwise (and it should be handled internally).
+ */
+-(BOOL)contentChatViewController:(id)contentChatViewController didClickPictureMessage:(HMChatMessage *)message;
+
+/**
+ * Tells the delegate that a specific audio message message was clicked.
+ *
+ * @param contentChatViewController The HMContentChatViewController instance that generated the click.
+ * @param message The message that was clicked. The actual image can be loaded from the file specified in the "file" entry in the message attributes dictionary.
+ *
+ * @result TRUE If the delegate handled the URL and no further action should be taken, FALSE otherwise (and it should be handled internally).
+ */
+-(BOOL)contentChatViewController:(id)contentChatViewController didClickAudioMessage:(HMChatMessage *)message;
+
+/** Tells the delegate that the user wants to send a picture: the delegate will need to take the appropriate steps to obtain a picture and then invoke the sendPictureMessage method on the chatView property.
+ *
+ * @param contentChatViewController The HMContentChatViewController instance that generated the request.
+ *
+ */
+-(void)contentChatViewControllerDidRequestPictureMessage:(id)contentChatViewController;
+
+/** Tells the delegate that the user wants to send an audio message: the delegate will need to take the appropriate steps to obtain a recording and then invoke the sendAudioMessage method on the chatView property.
+ *
+ * @param contentChatViewController The HMContentChatViewController instance that generated the request.
+ *
+ */
+-(void)contentChatViewControllerDidRequestAudioMessage:(id)contentChatViewController;
 @end
 
 /** Provides a simple UIViewController that renders a full-screen chat window.

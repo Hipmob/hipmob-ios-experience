@@ -20,6 +20,9 @@
     // register for push notifications
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound|UIRemoteNotificationTypeAlert)];
 
+    // setup the article cache: this loads up all the helpdesk articles so they are available offline
+    [[HMService sharedService] setupArticleCache:NO forApp:APPID];
+    
     // Override point for customization after application launch.
     return YES;
 }

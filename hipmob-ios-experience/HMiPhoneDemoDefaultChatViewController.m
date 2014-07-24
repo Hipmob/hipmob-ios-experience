@@ -43,7 +43,15 @@
         // set the title of the chat window
         controller.body.title = @"Chat with an Operator";
         
-        controller.chatView.sentTextColor = [UIColor redColor];
-    }];
+        //controller.navigationBar.barTintColor = [UIColor redColor];
+        
+        //controller.chatView.sentTextColor = [UIColor redColor];
+        
+        //controller.chatView.sendMedia.hidden = YES;
+        
+        //[controller.chatView setCustomData:@"Timestamp" forKey:@"Joined"];
+        //[controller.chatView setCustomData:@"$100K" forKey:@"Budget"];
+        
+    } forApp:APPID];
 }
 @end

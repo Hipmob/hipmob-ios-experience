@@ -72,7 +72,7 @@
         UIBarButtonItem * two = [[UIBarButtonItem alloc] initWithTitle:@"Two" style:UIBarButtonItemStylePlain target:self action:@selector(clickButton2:)];
         
         controller.content.extraBarButtonItems = @[one, two];
-    }];
+    } forApp:APPID];
 }
 
 - (IBAction)on_open_demo:(id)sender {
@@ -92,6 +92,6 @@
         UIBarButtonItem * two = [[UIBarButtonItem alloc] initWithTitle:@"Two" style:UIBarButtonItemStylePlain target:self action:@selector(clickButton2:)];
         
         controller.extraBarButtonItems = @[one, two];
-    }];
+    } forApp:APPID];
 }
 @end

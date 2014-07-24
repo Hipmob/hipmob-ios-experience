@@ -63,7 +63,7 @@
         
         // sets the default query
         controller.content.searchView.defaultQuery = @"ids:all";
-    }];
+    } forApp:APPID];
 }
 
 - (IBAction)on_open_demo:(id)sender {
@@ -92,7 +92,7 @@
         
         // and we're the delegate
         controller.searchDelegate = self;
-    }];
+    } forApp:APPID];
 }
 
 -(void)contentSearchViewController:(id)contentSearchViewController willRenderResults:(NSMutableArray *)results forQuery:(NSString *)query

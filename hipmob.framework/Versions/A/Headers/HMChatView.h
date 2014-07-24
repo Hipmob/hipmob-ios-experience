@@ -153,13 +153,14 @@
 @protocol HMChatViewDelegate <NSObject>;
 
 @optional
-/** Tells the delegate that a URL was pushed from the server. The delegate may choose to handle the URL itself: if it does, it should
+/** Tells the delegate that a URL was pushed from the server (on iOS7, this includes URLs that are click on by the user). The delegate may choose to handle the URL itself: if it does, it should
  * return TRUE or YES. If the delegate does not implement this method or if it returns FALSE or NO (i.e. it either does not handle
- * URLs of this format or if it doesn't want to implement any special logic) then the URL will be opened in the platform browser (i.e. Safari.
+ * URLs of this format or if it doesn't want to implement any special logic) then the URL will be opened in the platform browser (i.e. Safari).
  *
  * @param chatView The HMChatView instance that received the URL.
  * @param url The URL that was received.
- * @param messageId The id of the message that contained the URL. If you have the delegate associated with multiple chat view instances then you may receive multiple calls: you can use the messageId to ensure you only take action a single time.
+ * @param messageId The id of the message that contained the URL. If you have the delegate associated with multiple chat view instances then you may receive multiple calls: you can use the messageId to ensure you only take action a single time. For URLs that are clicked on, the messageId will be nil.
+ *
  * @result TRUE If the delegate handled the URL, FALSE otherwise.
  */
 -(BOOL)chatView:(id)chatView willHandleURL:(NSString*)url messageId:(NSString*)messageId;
@@ -186,6 +187,34 @@
 -(void)chatView:(id)chatView didReceiveMessage:(HMChatMessage *)message;
 
 /**
+ * Tells the delegate that a JSON message was received that was relevant to this view.
+ *
+ * If multiple views are connected to a single remote connection a message may come in that is not relevant to the current view
+ * (for example, a message from a peer may arrive when the currently visible chat view is for support messages). This provides a
+ * way for the chatview to indicate to its delegate that a new message that arrived is actually relevant to this chat view, so the
+ * owner may perform some additional notification.
+ *
+ * @param chatView The HMChatView instance that received the message.
+ * @param message The HMChatMessage instance that was received.
+ * @param contents An NSDictionary, NSArray, NSString or NSNumber that represents the JSON contents that were received.
+ */
+-(void)chatView:(id)chatView didReceiveMessage:(HMChatMessage *)message withContents:(id)contents;
+
+/**
+ * Tells the delegate that a binary message was received that was relevant to this view.
+ *
+ * If multiple views are connected to a single remote connection a message may come in that is not relevant to the current view
+ * (for example, a message from a peer may arrive when the currently visible chat view is for support messages). This provides a
+ * way for the chatview to indicate to its delegate that a new message that arrived is actually relevant to this chat view, so the
+ * owner may perform some additional notification.
+ *
+ * @param chatView The HMChatView instance that received the message.
+ * @param message The HMChatMessage instance that was received.
+ * @param contents An NSData instance that represents the binary contents that were received.
+ */
+-(void)chatView:(id)chatView didReceiveMessage:(HMChatMessage *)message withData:(NSData *)contents;
+
+/**
  * Tells the delegate that a message was sent that was relevant to this view.
  *
  * If multiple views are connected to a single remote connection a message may have been sent that is not relevant to the current view
@@ -202,9 +231,9 @@
  * Tells the delegate that an operator accepted the chat.
  *
  * @param chatView The HMChatView instance that sent the message.
- * @param operator The operator's user identifier.
+ * @param operatorId The operator's user identifier.
  */
--(void)chatView:(id)chatView didOperatorAccept:(NSString *)operator;
+-(void)chatView:(id)chatView didOperatorAccept:(NSString *)operatorId;
 
 /**
  * Tells the delegate that the connection came online.
@@ -267,6 +296,36 @@
  * @param tableView The tableView instance used to render the messages.
  */
 - (UITableViewCell *)chatView:(id)chatView cellForMessageRow:(HMChatMessage *)message withTableView:(UITableView *)tableView;
+
+/** Tells the delegate that a picture message was clicked. The delegate will be passed the chat message instance, and can access the thumbnail (a PNG-formatted image) path using the key "thumbnail" in the attributes dictionary, and the actual image (a PNG-formatted image) file using the key "file" in the attributes dictionary. If the delegate does not implement this method then no action will be taken.
+ *
+ * @param chatView The HMChatView instance within which the picture was clicked.
+ * @param message The HMChatMessage instance. This instance is auto released: if it is further retained by the delegate then any additional memory management tasks will need to be handled by the delegate.
+ *
+ */
+-(void)chatView:(id)chatView didClickPictureMessage:(HMChatMessage *)message;
+
+/** Tells the delegate that an audio message was clicked. The delegate will be passed the chat message instance, and can access the audio message file (an MP3-encoded audio file) using the key "file" in the attributes dictionary. If the delegate does not implement this method then no action will be taken.
+ *
+ * @param chatView The HMChatView instance within which the audio message was clicked.
+ * @param message The HMChatMessage instance. This instance is auto released: if it is further retained by the delegate then any additional memory management tasks will need to be handled by the delegate.
+ *
+ */
+-(void)chatView:(id)chatView didClickAudioMessage:(HMChatMessage *)message;
+
+/** Tells the delegate that the user wants to send a picture: the delegate will need to take the appropriate steps to obtain a picture and then invoke the sendPictureMessage method.
+ *
+ * @param chatView The HMChatView instance that requested the picture.
+ *
+ */
+-(void)chatViewDidRequestPictureMessage:(id)chatView;
+
+/** Tells the delegate that the user wants to send an audio message: the delegate will need to take the appropriate steps to obtain an audio file and then invoke the sendAudioMessage method.
+ *
+ * @param chatView The HMChatView instance that requested the audio message.
+ *
+ */
+-(void)chatViewDidRequestAudioMessage:(id)chatView;
 @end
 
 /** The core Hipmob chat view.
@@ -304,6 +363,11 @@
  * Returns the send button: this can be used to customize the button appearance.
  */
 @property (readonly, nonatomic, retain) UIButton * send;
+
+/**
+ * Returns the send media button: this can be used to customize the button appearance.
+ */
+@property (readonly, nonatomic, retain) UIButton * sendMedia;
 
 /**
  * Returns the input textfield: this can be used to customize the textfield appearance and behavior.
@@ -385,6 +449,16 @@
  * Contains extra padding to be applied to the text bubble for received messages. This is useful to tune the position of the text within the bubble.
  */
 @property (nonatomic, assign) UIEdgeInsets receivedExtraPadding;
+
+/**
+ * The size of the send button. Use this to handle custom send button images.
+ */
+@property (nonatomic, assign) CGSize sendButtonSize;
+
+/**
+ * The size of the send media button. Use this to handle custom send media button images.
+ */
+@property (nonatomic, assign) CGSize sendMediaButtonSize;
 
 ///------------------------------------------------------------------------------------------
 /// @name Initialization
@@ -530,6 +604,14 @@
  */
 -(void) updateName:(NSString*)value;
 
+/** Updates the user's connected phone number.
+ *
+ * @param value The new phone number for this user.
+ * @exception NSException If the value is nil.
+ *
+ */
+-(void) updatePhone:(NSString*)value;
+
 /** Updates the user's displayed email.
  *
  * @param value The new email for this user.
@@ -562,12 +644,20 @@
  */
 -(void) updateGeolocation:(CLLocation *)value;
 
-/** Sends a message to the recipient of this chat session.
+/** Sends a text message to the recipient of this chat session.
  *
  * @param text The text of the message.
  * @result YES if the message was successfully sent (the HMChatView instance is connected and the message could be delivered), NO otherwise.
  */
 -(BOOL) sendMessage:(NSString *)text;
+
+/** Sends a picture message to the recipient of this chat session.
+ *
+ * @param image The image to send.
+ *
+ * @result YES if the message was successfully sent (the HMChatView instance is connected and the message could be queued), NO otherwise.
+ */
+-(BOOL)sendPictureMessage:(UIImage *)image;
 
 ///------------------------------------------------------------------------------------------
 /// @name Chat View Connection Status
@@ -586,6 +676,12 @@
  * Once this is called this chat view will no longer receive updates: connect will have to be called a second time before any messages will be sent/received. If the chat view was started with initWithConnection then this call has no effect.
  */
 -(void) disconnect;
+
+///------------------------------------------------------------------------------------------
+/// @name Display Utilities
+///------------------------------------------------------------------------------------------
+-(void)setDisplayDuration:(NSTimeInterval)duration;
+-(void)setDisplayCurve:(UIViewAnimationCurve)curve;
 @end
 #endif
 

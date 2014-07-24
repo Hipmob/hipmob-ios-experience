@@ -48,6 +48,6 @@
         
         // sets the default query
         controller.searchView.defaultQuery = @"ids:all";
-    }];
+    } forApp:APPID];
 }
 @end

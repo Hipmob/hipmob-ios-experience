@@ -10,7 +10,7 @@
 #import "HMiPhoneConfig.h"
 #import "hipmob/HMService.h"
 
-@interface HMiPhoneDemoSearchOnlyViewController ()
+@interface HMiPhoneDemoSearchOnlyViewController () <HMContentHelpDeskSearchViewControllerDelegate>
 
 @end
 
@@ -51,6 +51,6 @@
         
         // sets the default query
         controller.searchView.defaultQuery = @"ids:all";
-    }];
+    } forApp:APPID];
 }
 @end

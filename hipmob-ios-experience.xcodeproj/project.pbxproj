@@ -88,6 +88,13 @@
 		B12B5310187F9A4E00FA8AB4 /* HMiPadDemoSearchWithChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12B530C187F9A4E00FA8AB4 /* HMiPadDemoSearchWithChatViewController.m */; };
 		B12B5313187F9EE000FA8AB4 /* HMiPadDemoArticleOnlyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12B5311187F9EE000FA8AB4 /* HMiPadDemoArticleOnlyViewController.m */; };
 		B12B5316187F9EEC00FA8AB4 /* HMiPadDemoDefaultChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B12B5314187F9EEC00FA8AB4 /* HMiPadDemoDefaultChatViewController.m */; };
+		B17E7BAB18D6CE3100E3A94F /* attach.overstate.png in Resources */ = {isa = PBXBuildFile; fileRef = B17E7BA518D6CE3100E3A94F /* attach.overstate.png */; };
+		B17E7BAC18D6CE3100E3A94F /* attach.overstate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B17E7BA618D6CE3100E3A94F /* attach.overstate@2x.png */; };
+		B17E7BAD18D6CE3100E3A94F /* attach.png in Resources */ = {isa = PBXBuildFile; fileRef = B17E7BA718D6CE3100E3A94F /* attach.png */; };
+		B17E7BAE18D6CE3100E3A94F /* attach@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B17E7BA818D6CE3100E3A94F /* attach@2x.png */; };
+		B17E7BAF18D6CE3100E3A94F /* imageplaceholder.png in Resources */ = {isa = PBXBuildFile; fileRef = B17E7BA918D6CE3100E3A94F /* imageplaceholder.png */; };
+		B17E7BB018D6CE3100E3A94F /* imageplaceholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B17E7BAA18D6CE3100E3A94F /* imageplaceholder@2x.png */; };
+		B1AE5721193EAE500052F5BB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AE5720193EAE500052F5BB /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -205,6 +212,13 @@
 		B12B5312187F9EE000FA8AB4 /* HMiPadDemoArticleOnlyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMiPadDemoArticleOnlyViewController.h; sourceTree = "<group>"; };
 		B12B5314187F9EEC00FA8AB4 /* HMiPadDemoDefaultChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMiPadDemoDefaultChatViewController.m; sourceTree = "<group>"; };
 		B12B5315187F9EEC00FA8AB4 /* HMiPadDemoDefaultChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMiPadDemoDefaultChatViewController.h; sourceTree = "<group>"; };
+		B17E7BA518D6CE3100E3A94F /* attach.overstate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = attach.overstate.png; path = hipmob.framework/Versions/A/Resources/attach.overstate.png; sourceTree = "<group>"; };
+		B17E7BA618D6CE3100E3A94F /* attach.overstate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "attach.overstate@2x.png"; path = "hipmob.framework/Versions/A/Resources/attach.overstate@2x.png"; sourceTree = "<group>"; };
+		B17E7BA718D6CE3100E3A94F /* attach.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = attach.png; path = hipmob.framework/Versions/A/Resources/attach.png; sourceTree = "<group>"; };
+		B17E7BA818D6CE3100E3A94F /* attach@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "attach@2x.png"; path = "hipmob.framework/Versions/A/Resources/attach@2x.png"; sourceTree = "<group>"; };
+		B17E7BA918D6CE3100E3A94F /* imageplaceholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = imageplaceholder.png; path = hipmob.framework/Versions/A/Resources/imageplaceholder.png; sourceTree = "<group>"; };
+		B17E7BAA18D6CE3100E3A94F /* imageplaceholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "imageplaceholder@2x.png"; path = "hipmob.framework/Versions/A/Resources/imageplaceholder@2x.png"; sourceTree = "<group>"; };
+		B1AE5720193EAE500052F5BB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +226,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1AE5721193EAE500052F5BB /* SystemConfiguration.framework in Frameworks */,
 				B12B5243187D3CEE00FA8AB4 /* CoreGraphics.framework in Frameworks */,
 				B12B5292187E1F2B00FA8AB4 /* CFNetwork.framework in Frameworks */,
 				B12B5290187E1F2500FA8AB4 /* libicucore.dylib in Frameworks */,
@@ -261,6 +276,7 @@
 		B12B523F187D3CEE00FA8AB4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B1AE5720193EAE500052F5BB /* SystemConfiguration.framework */,
 				B12B5291187E1F2B00FA8AB4 /* CFNetwork.framework */,
 				B12B528F187E1F2500FA8AB4 /* libicucore.dylib */,
 				B12B528D187E1F1A00FA8AB4 /* Security.framework */,
@@ -359,6 +375,12 @@
 		B12B52E9187E1F6B00FA8AB4 /* Hipmob Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B17E7BA518D6CE3100E3A94F /* attach.overstate.png */,
+				B17E7BA618D6CE3100E3A94F /* attach.overstate@2x.png */,
+				B17E7BA718D6CE3100E3A94F /* attach.png */,
+				B17E7BA818D6CE3100E3A94F /* attach@2x.png */,
+				B17E7BA918D6CE3100E3A94F /* imageplaceholder.png */,
+				B17E7BAA18D6CE3100E3A94F /* imageplaceholder@2x.png */,
 				B12B5293187E1F5E00FA8AB4 /* 7-hipmob-back.png */,
 				B12B5294187E1F5E00FA8AB4 /* 7-hipmob-chatbubble-from.png */,
 				B12B5295187E1F5E00FA8AB4 /* 7-hipmob-chatbubble-from@2x.png */,
@@ -560,6 +582,7 @@
 				B12B52CB187E1F5F00FA8AB4 /* 7-hipmob-send-inactive.png in Resources */,
 				B12B52CC187E1F5F00FA8AB4 /* 7-hipmob-send-instate.png in Resources */,
 				B12B52CD187E1F5F00FA8AB4 /* 7-hipmob-webview-back.png in Resources */,
+				B17E7BAE18D6CE3100E3A94F /* attach@2x.png in Resources */,
 				B12B52CE187E1F5F00FA8AB4 /* 7-hipmob-webview-back@2x.png in Resources */,
 				B12B52CF187E1F5F00FA8AB4 /* 7-hipmob-webview-forward.png in Resources */,
 				B12B52D0187E1F5F00FA8AB4 /* 7-hipmob-webview-forward@2x.png in Resources */,
@@ -567,6 +590,8 @@
 				B12B52D2187E1F5F00FA8AB4 /* hipmob-chat-pressed.png in Resources */,
 				B12B52D3187E1F5F00FA8AB4 /* hipmob-chat-pressed@2x.png in Resources */,
 				B12B52D4187E1F5F00FA8AB4 /* hipmob-chat.png in Resources */,
+				B17E7BAB18D6CE3100E3A94F /* attach.overstate.png in Resources */,
+				B17E7BB018D6CE3100E3A94F /* imageplaceholder@2x.png in Resources */,
 				B12B52D5187E1F5F00FA8AB4 /* hipmob-chat@2x.png in Resources */,
 				B12B52D6187E1F5F00FA8AB4 /* hipmob-chatbubble-from.png in Resources */,
 				B12B52D7187E1F5F00FA8AB4 /* hipmob-chatbubble-from@2x.png in Resources */,
@@ -588,8 +613,11 @@
 				B12B52E7187E1F5F00FA8AB4 /* hipmob-webview-forward.png in Resources */,
 				B12B52E8187E1F5F00FA8AB4 /* hipmob-webview-forward@2x.png in Resources */,
 				B12B5257187D3CEE00FA8AB4 /* Main_iPad.storyboard in Resources */,
+				B17E7BAC18D6CE3100E3A94F /* attach.overstate@2x.png in Resources */,
 				B12B525C187D3CEE00FA8AB4 /* Images.xcassets in Resources */,
 				B12B5254187D3CEE00FA8AB4 /* Main_iPhone.storyboard in Resources */,
+				B17E7BAF18D6CE3100E3A94F /* imageplaceholder.png in Resources */,
+				B17E7BAD18D6CE3100E3A94F /* attach.png in Resources */,
 				B12B524B187D3CEE00FA8AB4 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

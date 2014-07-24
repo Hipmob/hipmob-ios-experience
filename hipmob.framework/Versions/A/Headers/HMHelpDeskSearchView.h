@@ -51,6 +51,11 @@
  * The tags for the article.
  */
 @property (nonatomic, retain) NSArray * tags;
+
+/**
+ * Set to YES if this row was generated from an offline search.
+ */
+@property (nonatomic, assign) BOOL offline;
 @end
 
 @class HMHelpDeskSearchView;
@@ -138,6 +143,11 @@
  * The tag filter to apply to all queries.
  */
 @property (nonatomic, retain) NSString * tagFilter;
+
+/**
+ * The number of articles to be initially rquests for any new search. Defaults to 20.
+ */
+@property (nonatomic, assign) int limit;
 
 /**
  * The user's context when the search was loaded.

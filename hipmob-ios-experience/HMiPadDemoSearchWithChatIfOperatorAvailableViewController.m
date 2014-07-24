@@ -60,7 +60,7 @@
         
         // sets the default query
         controller.content.searchView.defaultQuery = @"ids:all";
-    }];
+    } forApp:APPID];
 }
 
 - (IBAction)on_open_demo:(id)sender {
@@ -86,6 +86,6 @@
         
         // sets the default query
         controller.searchView.defaultQuery = @"ids:all";
-    }];
+    } forApp:APPID];
 }
 @end
