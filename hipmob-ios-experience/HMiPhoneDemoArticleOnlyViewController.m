@@ -43,7 +43,9 @@
         // the title is set by default to the article title
         
         // disable the chat view
-        controller.body.chatEnabled = HMContentHelpDeskArticleChatEnabledAlways; //Never;
+        controller.body.chatEnabled = HMContentHelpDeskArticleChatEnabledNever;
+        
+        controller.view.backgroundColor = [UIColor whiteColor];
     }];
 }
 @end
