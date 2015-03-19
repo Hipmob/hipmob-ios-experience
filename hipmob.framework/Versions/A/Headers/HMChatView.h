@@ -3,7 +3,7 @@
 //  hipmob
 //
 //  Created by Olufemi Omojola on 6/1/13.
-//  Copyright (c) 2012 - 2013 Orthogonal Labs, Inc.
+//  Copyright (c) 2012 - 2015 Orthogonal Labs, Inc.
 //
 #ifndef _hipmob_hmchatview_h_
 #define _hipmob_hmchatview_h_
@@ -280,7 +280,7 @@
 -(void)chatView:(id)chatView didPeerGoOffline:(NSString *)peer;
 
 /**
- * Asks the delegate to give us the height of a specific row.
+ * Asks the delegate to give us the height of a specific row. If a value less than 0 is returned then the internal height calculation will be used: this can allow for simple visual overrides of only specific rows.
  *
  * @param chatView The HMChatView instance that received the notification.
  * @param message The HMChatMessage instance. This instance is auto released: if it is further retained by the delegate then any additional memory management tasks will need to be handled by the delegate.
@@ -289,7 +289,7 @@
 -(CGFloat)chatView:(id)chatView heightForMessageRow:(HMChatMessage *)message withTableView:(UITableView *)tableView;
 
 /**
- * Asks the delegate to give us the UITableViewCell for a specific message.
+ * Asks the delegate to give us the UITableViewCell for a specific message. If a nil value is returned then the default table view cell rendering is used: this can allow for simple visual overrides of only specific rows.
  *
  * @param chatView The HMChatView instance that received the notification.
  * @param message The HMChatMessage instance. This instance is auto released: if it is further retained by the delegate then any additional memory management tasks will need to be handled by the delegate.
@@ -326,6 +326,22 @@
  *
  */
 -(void)chatViewDidRequestAudioMessage:(id)chatView;
+
+/**
+ * Tells the delegate that the connection is ready.
+ *
+ * @param chatView The HMChatView instance that sent the message.
+ * @param connectionDefaults The connection defaults received from the server.
+ */
+-(void)chatView:(id)chatView isReady:(NSDictionary *)connectionDefaults;
+
+/** Tells the delegate that a specific message was clicked: this will fire for all messages. If the delegate does not implement this method then no action will be taken.
+ *
+ * @param chatView The HMChatView instance within which the picture was clicked.
+ * @param message The HMChatMessage instance. This instance is auto released: if it is further retained by the delegate then any additional memory management tasks will need to be handled by the delegate.
+ *
+ */
+-(void)chatView:(id)chatView didSelectMessage:(HMChatMessage *)message;
 @end
 
 /** The core Hipmob chat view.
@@ -375,12 +391,17 @@
 @property (readonly, nonatomic, retain) UITextView * input;
 
 /**
+ * Returns the toolbar that contains the send button and the input field: this can be used to customize the toolbar appearance.
+ */
+@property (readonly, nonatomic, retain) UIView * inputBar;
+
+/**
  * Returns the table view: this can be used to customize the tableview appearance.
  */
 @property (readonly, nonatomic, retain) UITableView * table;
 
 /**
- * Returns the toolbar that contains the send button and the input field: this can be used to customize the toolbar appearance.
+ * Returns the background toolbar that sits behind the inputBar.
  */
 @property (readonly, nonatomic, retain) UIToolbar * toolbar;
 

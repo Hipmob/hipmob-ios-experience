@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="kvb-ea-fgF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="kvb-ea-fgF">
     <dependencies>
-        <deployment defaultVersion="1552" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--Mi Phone Demo Root View Controller - The Hipmob Experience-->
+        <!--The Hipmob Experience-->
         <scene sceneID="rz1-Tf-AAi">
             <objects>
                 <tableViewController id="auJ-gK-e3d" customClass="HMiPhoneDemoRootViewController" sceneMemberID="viewController">
@@ -81,7 +81,7 @@
             </objects>
             <point key="canvasLocation" x="-205" y="132"/>
         </scene>
-        <!--Mi Phone Demo Help Desk Options View Controller - Helpdesk Options-->
+        <!--Helpdesk Options-->
         <scene sceneID="G8U-t0-a1Q">
             <objects>
                 <tableViewController title="Helpdesk Options" id="95B-Pf-qhZ" customClass="HMiPhoneDemoHelpDeskOptionsViewController" sceneMemberID="viewController">
@@ -240,7 +240,7 @@
             </objects>
             <point key="canvasLocation" x="330" y="-732"/>
         </scene>
-        <!--Mi Phone Demo Search With Chat View Controller - Search with Live Chat-->
+        <!--Search with Live Chat-->
         <scene sceneID="W9M-ES-VJm">
             <objects>
                 <viewController id="WJU-wu-ye6" customClass="HMiPhoneDemoSearchWithChatViewController" sceneMemberID="viewController">
@@ -254,7 +254,6 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="b5d-X8-tDZ">
                                 <rect key="frame" x="20" y="20" width="280" height="103"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">This class demonstrates launching a standard knowledge base search window. A chat button will always be available, and articles will be displayed within your application.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -262,14 +261,12 @@
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Source:  HMiPhoneDemoSearchWithChatViewController.m" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="m97-w8-7ne">
                                 <rect key="frame" x="20" y="131" width="280" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOz-dH-uuH">
                                 <rect key="frame" x="58" y="183" width="205" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Open Knowledge Base">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -292,7 +289,7 @@
             </objects>
             <point key="canvasLocation" x="360" y="-1401"/>
         </scene>
-        <!--Mi Phone Demo Search Only View Controller - Search Only-->
+        <!--Search Only-->
         <scene sceneID="p2e-in-mJx">
             <objects>
                 <viewController id="KKO-QP-e2O" customClass="HMiPhoneDemoSearchOnlyViewController" sceneMemberID="viewController">
@@ -306,7 +303,6 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rVu-YH-H39">
                                 <rect key="frame" x="20" y="20" width="280" height="103"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">This class demonstrates launching a standard knowledge base search window. No chat button will be available, and articles will be displayed within your application.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -314,14 +310,12 @@
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Source:  HMiPhoneDemoSearchOnlyViewController.m" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KZ5-VM-7MC">
                                 <rect key="frame" x="20" y="131" width="280" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v1C-hM-VVY">
                                 <rect key="frame" x="58" y="183" width="205" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Open Knowledge Base">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -344,7 +338,7 @@
             </objects>
             <point key="canvasLocation" x="861" y="-1401"/>
         </scene>
-        <!--Mi Phone Demo Search With Chat If Operator Available View Controller - Search (Operator Available Chat)-->
+        <!--Search (Operator Available Chat)-->
         <scene sceneID="VVB-pv-jiL">
             <objects>
                 <viewController id="kAX-nt-SPz" customClass="HMiPhoneDemoSearchWithChatIfOperatorAvailableViewController" sceneMemberID="viewController">
@@ -358,7 +352,6 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QLO-Nt-J9E">
                                 <rect key="frame" x="20" y="20" width="280" height="133"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">This class demonstrates launching a standard knowledge base search window. A chat button will only be shown if an operator is online, and articles will be displayed within your application. If no operator is available a custom button will be shown that opens an email dialog.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -366,14 +359,12 @@
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Source: HMiPhoneDemoSearchWithChatIfOperatorAvailableViewController.m" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BTx-g5-TF9">
                                 <rect key="frame" x="20" y="161" width="280" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2KT-CN-otB">
                                 <rect key="frame" x="58" y="226" width="205" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Open Knowledge Base">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -415,7 +406,7 @@
             </objects>
             <point key="canvasLocation" x="1776" y="-1401"/>
         </scene>
-        <!--Mi Phone Demo Article View Options View Controller - Article View Options-->
+        <!--Article View Options-->
         <scene sceneID="Jrs-rz-Rpy">
             <objects>
                 <tableViewController title="Article View Options" id="eZp-cm-32Z" customClass="HMiPhoneDemoArticleViewOptionsViewController" sceneMemberID="viewController">
@@ -545,7 +536,7 @@
             </objects>
             <point key="canvasLocation" x="330" y="132"/>
         </scene>
-        <!--Mi Phone Demo Live Chat Options View Controller - Live Chat Options-->
+        <!--Live Chat Options-->
         <scene sceneID="G8Z-bQ-ehO">
             <objects>
                 <tableViewController title="Live Chat Options" id="2Me-hp-on6" customClass="HMiPhoneDemoLiveChatOptionsViewController" sceneMemberID="viewController">
@@ -571,14 +562,14 @@
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="chatwithcustomcolors" textLabel="zS9-tr-MDH" style="IBUITableViewCellStyleDefault" id="v2r-u1-x2x">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="customrowlayout" textLabel="zS9-tr-MDH" style="IBUITableViewCellStyleDefault" id="v2r-u1-x2x">
                                 <rect key="frame" x="0.0" y="163" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v2r-u1-x2x" id="AHg-wq-Xg0">
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Chat with Custom Colors" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zS9-tr-MDH">
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Custom Row Layout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zS9-tr-MDH">
                                             <rect key="frame" x="15" y="0.0" width="270" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -631,13 +622,14 @@
                     <navigationItem key="navigationItem" title="Live Chat Options" id="x1S-7r-N0a"/>
                     <connections>
                         <segue destination="jXZ-7t-7TR" kind="push" identifier="defaultchat" id="pfF-QB-zU7"/>
+                        <segue destination="eVx-8p-TIX" kind="push" identifier="customrowlayout" id="bOj-gZ-V1b"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e88-6B-IWQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="330" y="996"/>
         </scene>
-        <!--Mi Phone Demo Article Only View Controller - Article Only-->
+        <!--Article Only-->
         <scene sceneID="U5x-8Z-Hu3">
             <objects>
                 <viewController id="qZN-jH-i65" customClass="HMiPhoneDemoArticleOnlyViewController" sceneMemberID="viewController">
@@ -651,21 +643,18 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="This class demonstrates launching a standard knowledge base article display. No chat button will be available." translatesAutoresizingMaskIntoConstraints="NO" id="E0e-DU-2Q5">
                                 <rect key="frame" x="20" y="20" width="280" height="69"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Source: HMiPhoneDemoArticleOnlyViewController.m" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zey-1D-Eao">
                                 <rect key="frame" x="20" y="97" width="280" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2T-Ii-bZi">
                                 <rect key="frame" x="58" y="145" width="205" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Open Article">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -686,7 +675,7 @@
             </objects>
             <point key="canvasLocation" x="905" y="132"/>
         </scene>
-        <!--Mi Phone Demo Default Chat View Controller - Default Chat-->
+        <!--Default Chat-->
         <scene sceneID="c0f-KO-Cbg">
             <objects>
                 <viewController id="jXZ-7t-7TR" customClass="HMiPhoneDemoDefaultChatViewController" sceneMemberID="viewController">
@@ -700,21 +689,18 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="This class demonstrates launching a standard live chat view controller." translatesAutoresizingMaskIntoConstraints="NO" id="oHL-Jh-gsD">
                                 <rect key="frame" x="20" y="20" width="280" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Source: HMiPhoneDemoDefaultChatViewController.m" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tES-dH-F8a">
                                 <rect key="frame" x="20" y="77" width="280" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pnw-eH-xV8">
                                 <rect key="frame" x="58" y="126" width="205" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Open Live Chat">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -768,6 +754,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MaX-0m-Ed4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-631" y="132"/>
+        </scene>
+        <!--Custom Chat Row Layout-->
+        <scene sceneID="W2V-Sd-0bn">
+            <objects>
+                <viewController id="eVx-8p-TIX" customClass="HMiPhoneDemoCustomRowChatViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oFr-93-Wzp"/>
+                        <viewControllerLayoutGuide type="bottom" id="PHz-Vn-E2Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1vE-Vw-b55">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="This class demonstrates launching a customized live chat view controller with an enhanced layout for each message row." translatesAutoresizingMaskIntoConstraints="NO" id="kPN-4I-vcH">
+                                <rect key="frame" x="20" y="20" width="280" height="87"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Source: HMiPhoneDemoCustomRowChatViewController.m" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="44c-cu-GFg">
+                                <rect key="frame" x="20" y="115" width="280" height="41"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4K-UG-L3J">
+                                <rect key="frame" x="58" y="164" width="205" height="30"/>
+                                <state key="normal" title="Open Live Chat">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="on_open_demo:" destination="eVx-8p-TIX" eventType="touchUpInside" id="cNI-PH-P6P"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Custom Chat Row Layout" id="A3w-Qk-Ydu"/>
+                    <connections>
+                        <outlet property="opendemo" destination="e4K-UG-L3J" id="MSU-mT-ut8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RIm-Cc-xph" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="916" y="1710"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

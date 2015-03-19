@@ -3,7 +3,7 @@
 //  hipmob
 //
 //  Created by Olufemi Omojola on 04/04/2014.
-//  Copyright (c) 2013 Orthogonal Labs, Inc. All rights reserved.
+//  Copyright (c) 2013-2015 Orthogonal Labs, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

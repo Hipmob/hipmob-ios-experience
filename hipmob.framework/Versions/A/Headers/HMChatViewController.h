@@ -3,7 +3,7 @@
 //  hipmob
 //
 //  Created by Olufemi Omojola on 6/1/13.
-//  Copyright (c) 2012 - 2013 Orthogonal Labs, Inc.
+//  Copyright (c) 2012 - 2015 Orthogonal Labs, Inc.
 //
 #ifndef _hipmob_hmchatviewcontroller_h_
 #define _hipmob_hmchatviewcontroller_h_
@@ -60,9 +60,9 @@
  *
  * @param chatViewController The HMChatViewController instance that received the message.
  * @param message The message that was received.
- * @param contents An NSData instance that represents the binary contents that were received.
+ * @param data An NSData instance that represents the binary contents that were received.
  */
--(void)chatViewController:(id)chatViewController didReceiveMessage:(HMChatMessage *)message withData:(NSData *)contents;
+-(void)chatViewController:(id)chatViewController didReceiveMessage:(HMChatMessage *)message withData:(NSData *)data;
 
 
 /**
@@ -143,6 +143,40 @@
  *
  */
 -(void)chatViewControllerDidRequestAudioMessage:(id)chatViewController;
+
+/**
+ * Tells the delegate that the connection is ready.
+ *
+ * @param chatViewController The HMChatViewController instance that generated the request.
+ * @param connectionDefaults The connection defaults received from the server.
+ */
+-(void)chatViewController:(id)chatViewController isReady:(NSDictionary *)connectionDefaults;
+
+/**
+ * Asks the delegate to give us the height of a specific row. If a value less than 0 is returned then the internal height calculation will be used: this can allow for simple visual overrides of only specific rows.
+ *
+ * @param chatViewController The HMChatViewController instance that generated the request.
+ * @param message The HMChatMessage instance. This instance is auto released: if it is further retained by the delegate then any additional memory management tasks will need to be handled by the delegate.
+ * @param tableView The tableView instance used to render the messages.
+ */
+-(CGFloat)chatViewController:(id)chatViewController heightForMessageRow:(HMChatMessage *)message withTableView:(UITableView *)tableView;
+
+/**
+ * Asks the delegate to give us the UITableViewCell for a specific message. If a nil value is returned then the default table view cell rendering is used: this can allow for simple visual overrides of only specific rows.
+ *
+ * @param chatViewController The HMChatViewController instance that generated the request.
+ * @param message The HMChatMessage instance. This instance is auto released: if it is further retained by the delegate then any additional memory management tasks will need to be handled by the delegate.
+ * @param tableView The tableView instance used to render the messages.
+ */
+- (UITableViewCell *)chatViewController:(id)chatViewController cellForMessageRow:(HMChatMessage *)message withTableView:(UITableView *)tableView;
+
+/**
+ * Informs the delegate that a specific message was clicked on.
+ *
+ * @param chatViewController The HMChatViewController instance that generated the request.
+ * @param message The HMChatMessage instance. This instance is auto released: if it is further retained by the delegate then any additional memory management tasks will need to be handled by the delegate.
+ */
+- (void)chatViewController:(id)chatViewController didSelectMessage:(HMChatMessage *)message;
 @end
 
 /**

@@ -3,7 +3,7 @@
 //  hipmob
 //
 //  Created by Olufemi Omojola on 08/06/2013.
-//  Copyright (c) 2012 - 2013 Orthogonal Labs, Inc.
+//  Copyright (c) 2012 - 2015 Orthogonal Labs, Inc.
 //
 #ifndef _hipmob_hmhelpdesksearchpopovercontroller_h_
 #define _hipmob_hmhelpdesksearchpopovercontroller_h_

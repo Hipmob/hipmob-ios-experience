@@ -9,6 +9,7 @@
 #import "HMAppDelegate.h"
 #import "hipmob/HMService.h"
 #import "HMiPhoneConfig.h"
+@import Foundation;
 
 @implementation HMAppDelegate
 
@@ -17,11 +18,33 @@
     // setup the Hipmob shared service
     [[HMService sharedService] setup:APPID withLaunchOptions:launchOptions];
 
-    // register for push notifications
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound|UIRemoteNotificationTypeAlert)];
+    NSUserDefaults * prefs = [NSUserDefaults standardUserDefaults];
+    if(![prefs valueForKey:@"userid"]){
+        [prefs setValue:[[NSUUID UUID] UUIDString] forKey:@"userid"];
+        [prefs synchronize];
+    }
+    [[HMService sharedService] setUser:[prefs valueForKey:@"userid"]];
 
+    // register for push notifications
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000
+    if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+        // use registerUserNotificationSettings
+        // iOS 8 Notifications
+        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:(UIUserNotificationTypeSound | UIUserNotificationTypeAlert | UIUserNotificationTypeBadge) categories:nil]];
+        
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+    } else {
+        [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound|UIRemoteNotificationTypeAlert)];
+    }
+#else
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge|UIRemoteNotificationTypeSound|UIRemoteNotificationTypeAlert)];
+#endif
+    
     // setup the article cache: this loads up all the helpdesk articles so they are available offline
     [[HMService sharedService] setupArticleCache:NO forApp:APPID];
+    
+    // handle being launched from a Hipmob push notification
+    [[HMService sharedService] onLaunch:launchOptions];
     
     // Override point for customization after application launch.
     return YES;
@@ -65,4 +88,8 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    [[HMService sharedService] onPushNotificationReceived:userInfo];
+}
 @end

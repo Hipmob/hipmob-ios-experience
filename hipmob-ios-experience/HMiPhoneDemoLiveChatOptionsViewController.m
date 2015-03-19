@@ -31,6 +31,8 @@
 
     [_menuItems addObject:@"defaultchat"];
     
+    [_menuItems addObject:@"customrowlayout"];
+    
     //[_menuItems addObject:@"chatwithcustomcolors"];
     
     //[_menuItems addObject:@"chatinreveal"];
@@ -89,6 +91,8 @@
     NSString * opt = (NSString *)[self.menuItems objectAtIndex:[indexPath row]];
     if([@"defaultchat" isEqualToString:opt]){
         [self performSegueWithIdentifier:@"defaultchat" sender:self];
+    }else if([@"customrowlayout" isEqualToString:opt]){
+        [self performSegueWithIdentifier:@"customrowlayout" sender:self];
     }
 }
 @end
