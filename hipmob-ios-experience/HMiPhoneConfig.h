@@ -12,8 +12,8 @@
 /**
  * The Hipmob App ID to use.
  */
-#define     APPID           @"bc8ed80d36a84f619682ef7c7c3614cc" // testing
-//#define     APPID           @"2ea7d86854df4ca185af84e68ea72fe1" // production
+//#define     APPID           @"bc8ed80d36a84f619682ef7c7c3614cc" // testing
+#define     APPID           @"2ea7d86854df4ca185af84e68ea72fe1" // production
 
 /**
  * The article within the app to show.

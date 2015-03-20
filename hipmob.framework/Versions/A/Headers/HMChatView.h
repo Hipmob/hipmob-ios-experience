@@ -698,6 +698,12 @@
  */
 -(void) disconnect;
 
+/**
+ * Closes the chat view, disconnecting any open connection and releasing any handles. Call this when you are ready to dispose of the chat iew.
+ *
+ */
+-(void)close;
+
 ///------------------------------------------------------------------------------------------
 /// @name Display Utilities
 ///------------------------------------------------------------------------------------------
