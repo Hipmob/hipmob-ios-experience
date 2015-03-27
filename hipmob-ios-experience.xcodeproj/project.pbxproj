@@ -4486,7 +4486,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cp -a ../../iOS\\ Framework/hipmob/*.h hipmob.framework/Versions/A/Headers\n\nrm -rf hipmob.framework/Versions/A/Headers/HMRemoteConnection.h\nrm -rf hipmob.framework/Versions/A/Headers/HMInternalConfiguration.h\n                                   \nif [ \"${CONFIGURATION}\" == \"Debug\" ] ; then\n    cp -a ${BUILD_DIR}/Debug-iphoneuniversal/hipmob hipmob.framework/Versions/A/hipmob\n    cp -a ${BUILD_DIR}/Debug-iphoneuniversal/full/hipmob.framework/Versions/A/Resources/*.png hipmob.framework/Versions/A/Resources/\nelse\n    cp -a ${BUILD_DIR}/Release-iphoneuniversal/hipmob hipmob.framework/Versions/A/hipmob\n    cp -a ${BUILD_DIR}/Release-iphoneuniversal/full/hipmob.framework/Versions/A/Resources/*.png hipmob.framework/Versions/A/Resources/\nfi";
+			shellScript = "if [ -e \"../../iOS\\ Framework\" ] ; then\n  cp -a ../../iOS\\ Framework/hipmob/*.h hipmob.framework/Versions/A/Headers\n\n  rm -rf hipmob.framework/Versions/A/Headers/HMRemoteConnection.h\n  rm -rf hipmob.framework/Versions/A/Headers/HMInternalConfiguration.h\n                                   \n  if [ \"${CONFIGURATION}\" == \"Debug\" ] ; then\n      cp -a ${BUILD_DIR}/Debug-iphoneuniversal/hipmob hipmob.framework/Versions/A/hipmob\n      cp -a ${BUILD_DIR}/Debug-iphoneuniversal/full/hipmob.framework/Versions/A/Resources/*.png hipmob.framework/Versions/A/Resources/\n  else\n      cp -a ${BUILD_DIR}/Release-iphoneuniversal/hipmob hipmob.framework/Versions/A/hipmob\n      cp -a ${BUILD_DIR}/Release-iphoneuniversal/full/hipmob.framework/Versions/A/Resources/*.png hipmob.framework/Versions/A/Resources/\n  fi\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
